@@ -29,16 +29,13 @@
 						 <span class="icon-bar"></span><span class="icon-bar">
 						 	
 						 </span><span class="icon-bar"></span>
-						 </button> <a class="navbar-brand" href="#">ScrumAnyWhere</a>
+						 </button> <a class="navbar-brand" href="{{ action('homeController@index')}}">ScrumAnyWhere</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="#">Link</a>
-						</li>
-						<li>
-							<a href="#">Link</a>
+							<a href="{{ action('projectController@index')}}">Project List</a>
 						</li>
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menus<strong class="caret"></strong></a>
@@ -67,7 +64,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="#">Raphael</a>
+							<a href="#">Login</a>
 						</li>
 						</li>
 					</ul>
@@ -78,19 +75,7 @@
 	</div>
 	<div class="row clearfix">
 		<div class="col-md-4 column">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						Panel title
-					</h3>
-				</div>
-				<div class="panel-body">
-					Panel con
-				</div>
-				<div class="panel-footer">
-					Panel footer
-				</div>
-			</div>
+			@yield('sidebar')			
 		</div>
 		<div class="col-md-8 column">
 			@yield('main')

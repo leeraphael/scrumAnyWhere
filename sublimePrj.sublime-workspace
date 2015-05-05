@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"projectController"
+			],
+			[
 				"acti",
 				"active"
 			]
@@ -11,6 +15,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "resources/views/app.blade.php",
+			"settings":
+			{
+				"buffer_size": 2954,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/project.blade.php",
+			"settings":
+			{
+				"buffer_size": 455,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -20,9 +40,13 @@
 	"command_palette":
 	{
 		"height": 196.0,
-		"last_filter": "insta",
+		"last_filter": "git add ",
 		"selected_items":
 		[
+			[
+				"git add ",
+				"Git: Add Current File"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -52,26 +76,25 @@
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Commands",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Auth",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/bootstrap",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/css",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/fonts",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/js",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views"
 	],
 	"file_history":
 	[
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/project.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/routes.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/projectController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/HomeController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/project.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/fonts/glyphicons-halflings-regular.eot",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/app.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/css/app.css",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/welcome.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/bootstrap/app.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/routes.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Controller.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/HomeController.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Auth/AuthController.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/home.blade.php",
 		"/C/DevTools/xmapp/htdocs/twbs/index.php"
@@ -109,8 +132,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "resources/views/app.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2398,
+								2399
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 983.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/project.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								455
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -163,8 +247,20 @@
 		"selected_items":
 		[
 			[
+				"project",
+				"resources\\views\\project.blade.php"
+			],
+			[
 				"route",
 				"app\\Http\\routes.php"
+			],
+			[
+				"controllerproj",
+				"app\\Http\\Controllers\\project.php"
+			],
+			[
+				"homecon",
+				"app\\Http\\Controllers\\HomeController.php"
 			],
 			[
 				"control",
