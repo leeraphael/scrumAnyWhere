@@ -4,7 +4,7 @@ use App\Project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+use Request;
 
 class projectController extends Controller {
 
@@ -26,7 +26,7 @@ class projectController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('projects.create');
 	}
 
 	/**
@@ -36,7 +36,12 @@ class projectController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$input = Request::all();
+
+		$project = new project(['name'=>$input['name']]);
+		$project->save();
+		
+		return  redirect('project');
 	}
 
 	/**

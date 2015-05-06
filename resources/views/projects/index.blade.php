@@ -1,7 +1,9 @@
 @extends('app')
 
 @section('main')
-
+	<div class="col-sm-offset-0 col-sm-8 column">
+		<a href="{{ action('projectController@create') }}" class="btn btn-info btn-md" role="button">Create New Project</a>
+	</div>
 	<table class="table">
 		<thead>
 			<tr>
