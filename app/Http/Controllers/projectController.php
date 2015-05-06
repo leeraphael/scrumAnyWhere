@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class projectController extends Controller {
 	 */
 	public function index()
 	{
-		return view('project');
+		$projects = Project::all();
+		return view('projects.index', compact('projects'));
 	}
 
 	/**
@@ -45,7 +47,8 @@ class projectController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$project = project::findOrFail($id);
+		return view('projects.show', compact('project'));
 	}
 
 	/**
