@@ -41,7 +41,7 @@
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menus<strong class="caret"></strong></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#">Action</a>
+									<a href="{{ action('taskController@index')}}">Task List</a>
 								</li>
 								<li>
 									<a href="#">Another action</a>

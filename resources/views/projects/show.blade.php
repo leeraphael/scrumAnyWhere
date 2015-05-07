@@ -1,23 +1,22 @@
 @extends('app')
 
 @section('main')
-
+	<div class="col-sm-offset-0 col-sm-12 column">
+		<a href="{{ action('projectController@create') }}" class="btn btn-info btn-md" role="button">Modified</a>
+		<hr>
+	</div>
+	<div class="col-sm-offset-0 col-sm-12 column">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
 					 <label for="inputEmail3" class="col-sm-2 control-label">Project Id</label>
 					<div class="col-sm-10">
-						<input type="id" class="form-control" id="inputEmail3" value="{{ $project->id }}" />
+						<input type="id" class="form-control" id="inputEmail3" value="{{ $project->id }}" disabled />
 					</div>
 				</div>
 				<div class="form-group">
 					 <label for="inputPassword3" class="col-sm-2 control-label">Project Name</label>
 					<div class="col-sm-10">
-						<input type="name" class="form-control" id="inputEmail3" value="{{ $project->name }}" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						 <button type="submit" class="btn btn-default">Save</button>
+						<input type="name" class="form-control" id="inputEmail3" value="{{ $project->name }}" disabled />
 					</div>
 				</div>
 			</form>
@@ -69,5 +68,9 @@
 					</tr>
 				</tbody>
 			</table>
+
+	</div>
+
+
 @endsection
 

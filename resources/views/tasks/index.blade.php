@@ -2,7 +2,7 @@
 
 @section('main')
 	<div class="col-sm-offset-0 col-sm-12 column">
-		<a href="{{ action('projectController@create') }}" class="btn btn-info btn-md" role="button">Create New Project</a>
+		<a href="{{ action('projectController@create') }}" class="btn btn-info btn-md" role="button">Create New Task</a>
 		<hr>
 	</div>
 	<table class="table">
@@ -12,7 +12,7 @@
 					No
 				</th>
 				<th>
-					Project Name
+					Task Name
 				</th>
 				<th>
 					Last Updated Time
@@ -20,16 +20,16 @@
 			</tr>
 		</thead>
 		<tbody>
-		@foreach($projects as $project)
+		@foreach($tasks as $task)
 			<tr>
 				<td>
-					{{ $project->id }}
+					{{ $task->id }}
 				</td>
 				<td>
-					<a href="{{ url('/project', $project->id) }}">{{ $project->name }}</a>
+					<a href="{{ url('/tasks', $task->id) }}">{{ $task->name }}</a>
 				</td>
 				<td>
-					{{ $project->updated_at }}
+					{{ $tasks->updated_at }}
 				</td>
 			</tr>
 		@endforeach			

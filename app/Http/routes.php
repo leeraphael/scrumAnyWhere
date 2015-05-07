@@ -17,6 +17,7 @@ Route::get('project', 'projectController@index');
 Route::get('project/{id}', 'projectController@show');
 Route::post('project', 'projectController@store');
 
+Route::get('task', 'taskController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
