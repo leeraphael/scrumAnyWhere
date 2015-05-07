@@ -7,7 +7,7 @@
 	<title>ScrumAnyWhere</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+	@yield('head')
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -44,7 +44,7 @@
 									<a href="{{ action('taskController@index')}}">Task List</a>
 								</li>
 								<li>
-									<a href="#">Another action</a>
+									<a href="{{ action('miscController@timeline')}}">Timeline</a>
 								</li>
 								<li>
 									<a href="#">Something else here</a>
