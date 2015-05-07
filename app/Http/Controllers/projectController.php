@@ -4,8 +4,6 @@ use App\Project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Request;
-
 class projectController extends Controller {
 
 	/**
@@ -34,11 +32,9 @@ class projectController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Requests\createProjectRequest $request)
 	{
-		$input = Request::all();
-
-		$project = new project(['name'=>$input['name']]);
+		$project = new project(['name'=>$request['name']]);
 		$project->save();
 		
 		return  redirect('project');
