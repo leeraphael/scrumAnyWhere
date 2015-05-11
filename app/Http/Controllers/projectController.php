@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Project;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class projectController extends Controller {
 
@@ -32,9 +32,10 @@ class projectController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Requests\createProjectRequest $request)
-	{
-		$project = new project(['name'=>$request['name']]);
+	public function store(Request $request)
+	{		
+		$input = $request->all();
+		$project = new project(['name'=>$input['name']]);
 		$project->save();
 		
 		return  redirect('project');
@@ -60,7 +61,8 @@ class projectController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$project = project::findOrFail($id);
+		return view('projects.edit', compact('project'));	
 	}
 
 	/**
@@ -69,9 +71,14 @@ class projectController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+		$input = $request->all();
+		$project = project::findOrFail($id);
+		$project->name = $input['name'];
+		$project->save();
+
+		return redirect('project');
 	}
 
 	/**
@@ -82,7 +89,9 @@ class projectController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$project = project::findOrFail($id);
+		$project->delete();
+		return redirect('project');
 	}
 
 }

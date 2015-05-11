@@ -13,16 +13,8 @@
 
 Route::get('/', 'homeController@index');
 
-Route::get('project/create', 'projectController@create');
-Route::get('project', 'projectController@index');
-Route::get('project/{id}', 'projectController@show');
-Route::post('project', 'projectController@store');
+Route::resource('project', 'projectController');
 
 Route::get('timeline', 'miscController@timeline');
 
 Route::get('task', 'taskController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);

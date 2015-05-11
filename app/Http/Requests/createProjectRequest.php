@@ -20,7 +20,7 @@ class createProjectRequest extends Request {
 	 * @return array
 	 */
 	public function rules()
-	{
+	{		
 		return [
 			'name' => 'required'
 		];

@@ -1,8 +1,11 @@
 @extends('app')
 
 @section('main')
-	<div class="col-sm-offset-0 col-sm-12 column">
-		<a href="{{ action('projectController@create') }}" class="btn btn-info btn-md" role="button">Modified</a>
+	<div class="col-sm-12 column">		
+		{!! Form::open(['method'=>'DELETE', 'action' => ['projectController@destroy', $project->id], 'class'=> 'form-horizontal']) !!} 
+		<a href="{{ action('projectController@edit', $project->id) }}" class="btn btn-info btn-md" role="button">Modified</a>
+		 <button type="submit" class="btn btn-danger">Delete</button>
+		{!! Form::close() !!}
 		<hr>
 	</div>
 	<div class="col-sm-offset-0 col-sm-12 column">

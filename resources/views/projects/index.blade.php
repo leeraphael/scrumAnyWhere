@@ -23,7 +23,7 @@
 		@foreach($projects as $project)
 			<tr>
 				<td>
-					{{ $project->id }}
+					<a href="{{ url('/project', $project->id) }}">{{ $project->id }}</a>
 				</td>
 				<td>
 					<a href="{{ url('/project', $project->id) }}">{{ $project->name }}</a>
