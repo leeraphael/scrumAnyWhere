@@ -2,7 +2,7 @@
 
 @section('main')
 	<div class="col-sm-offset-0 col-sm-12 column">
-		<a href="{{ action('projectController@create') }}" class="btn btn-info btn-md" role="button">Create New Task</a>
+		<a href="{{ action('taskController@create') }}" class="btn btn-info btn-md" role="button">Create New Task</a>
 		<hr>
 	</div>
 	<table class="table">
@@ -23,13 +23,13 @@
 		@foreach($tasks as $task)
 			<tr>
 				<td>
-					{{ $task->id }}
+					<a href="{{ url('/task', $task->id) }}">{{ $task->id }}</a>
 				</td>
 				<td>
-					<a href="{{ url('/tasks', $task->id) }}">{{ $task->name }}</a>
+					<a href="{{ url('/task', $task->id) }}">{{ $task->name }}</a>
 				</td>
 				<td>
-					{{ $tasks->updated_at }}
+					{{ $task->updated_at }}
 				</td>
 			</tr>
 		@endforeach			
