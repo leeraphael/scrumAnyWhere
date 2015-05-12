@@ -9,7 +9,7 @@ class story extends Model {
 	 *
 	 * @var string
 	 */
-	protected $table = 'storys';
+	protected $table = 'stories';
 
 
 	/**
