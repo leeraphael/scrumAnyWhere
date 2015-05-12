@@ -15,5 +15,7 @@ Route::get('/', 'homeController@index');
 
 Route::resource('project', 'projectController');
 Route::resource('task', 'taskController');
+Route::resource('story', 'storyController');
+Route::resource('comment', 'commentController');
 
 Route::get('timeline', 'miscController@timeline');

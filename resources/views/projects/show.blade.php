@@ -23,6 +23,12 @@
 					</div>
 				</div>
 			</form>
+	</div>			
+	<div class="col-sm-12 column">		
+		<a href="{{ action('storyController@create', $project->id) }}" class="btn btn-info btn-md" role="button">Create New Story</a>
+		<hr>
+	</div>
+	<div class="col-sm-offset-0 col-sm-12 column">			
 			<table class="table">
 				<thead>
 					<tr>
