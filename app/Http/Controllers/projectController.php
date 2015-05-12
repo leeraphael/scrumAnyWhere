@@ -5,7 +5,7 @@ use App\story;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-function showProjectStory($id)
+function showAll($id)
 {
 	$project = project::findOrFail($id);
 	$stories = story::where('projectId', '=', $project->id)->get();
@@ -57,7 +57,7 @@ class projectController extends Controller {
 	 */
 	public function show($id)
 	{
-		return showProjectStory($id);
+		return showAll($id);
 	}
 
 	/**
@@ -85,7 +85,7 @@ class projectController extends Controller {
 		$project->name = $input['name'];
 		$project->save();
 
-		return showProjectStory($id);
+		return showAll($id);
 	}
 
 	/**

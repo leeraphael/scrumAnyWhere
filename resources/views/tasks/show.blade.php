@@ -2,10 +2,11 @@
 
 @section('main')
 	<div class="col-sm-12 column">		
-		{!! Form::open(['method'=>'DELETE', 'action' => ['taskController@destroy', $task->id], 'class'=> 'form-horizontal']) !!} 
-		<a href="{{ action('taskController@edit', $task->id) }}" class="btn btn-info btn-md" role="button">Modified</a>
-		 <button type="submit" class="btn btn-danger">Delete</button>
-		 <input type="hidden" id="taskId" name="back" value="back">
+		{!! Form::open(['method'=>'DELETE', 'action' => ['taskController@destroy', $task->id], 'class'=> 'form-horizontal']) !!} 			
+			<a href="{{ URL::previous() }}" class="btn btn-default" role="button">Back</a>
+			<a href="{{ action('taskController@edit', $task->id) }}" class="btn btn-info btn-md" role="button">Modified</a>
+		 	<button type="submit" class="btn btn-danger">Delete</button>
+		 	<input type="hidden" id="taskId" name="back" value="back">
 		{!! Form::close() !!}
 		<hr>
 	</div>

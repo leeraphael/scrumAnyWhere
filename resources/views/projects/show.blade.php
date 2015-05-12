@@ -3,6 +3,7 @@
 @section('main')
 	<div class="col-sm-12 column">		
 		{!! Form::open(['method'=>'DELETE', 'action' => ['projectController@destroy', $project->id], 'class'=> 'form-horizontal']) !!} 
+			<a href="{{ URL::previous() }}" class="btn btn-default" role="button">Back</a>
 			<a href="{{ action('projectController@edit', $project->id) }}" class="btn btn-info btn-md" role="button">Modified</a>
 		 	<button type="submit" class="btn btn-danger">Delete</button>
 		 	<a href="{{ action('storyController@create', ["projectId" => $project->id]) }}" class="btn btn-info btn-md" role="button">Create New Story</a>

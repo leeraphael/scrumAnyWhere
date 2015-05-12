@@ -7,7 +7,12 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-
+function showStoryTask($id)
+{
+	$story = story::findOrFail($id);
+	$tasks = task::where('storyId', '=', $story->id)->get();
+	return view('stories.show', compact('story', 'tasks'));
+}
 class storyController extends Controller {
 
 	/**
@@ -64,12 +69,7 @@ class storyController extends Controller {
 	 */
 	public function show($id)
 	{
-		// collect project data
-		$story = story::findOrFail($id);
-		// collect project data
-		//$stories = story::all();
-		$tasks = task::where('storyId', '=', $story->id)->get();
-		return view('stories.show', compact('story', 'tasks'));
+		return showStoryTask($id);
 	}
 
 	/**
@@ -97,7 +97,7 @@ class storyController extends Controller {
 		$story->name = $input['name'];
 		$story->save();
 
-		return redirect('story');
+		return showStoryTask($id);
 	}
 
 	/**

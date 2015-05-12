@@ -7,6 +7,11 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+function showAll($id)
+{
+	$task = task::findOrFail($id);
+	return view('tasks.show', compact('task'));
+}
 class taskController extends Controller {
 
 	/**
@@ -63,8 +68,7 @@ class taskController extends Controller {
 	 */
 	public function show($id)
 	{
-		$task = task::findOrFail($id);
-		return view('tasks.show', compact('task'));
+		return showAll($id);
 	}
 
 	/**
@@ -92,7 +96,7 @@ class taskController extends Controller {
 		$task->name = $input['name'];
 		$task->save();
 
-		return redirect('task');
+		return showAll($id);
 	}
 
 	/**
