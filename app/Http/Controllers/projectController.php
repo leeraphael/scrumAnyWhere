@@ -1,8 +1,16 @@
 <?php namespace App\Http\Controllers;
 
 use App\Project;
+use App\story;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
+function showProjectStory($id)
+{
+	$project = project::findOrFail($id);
+	$stories = story::where('projectId', '=', $project->id)->get();
+	return view('projects.show', compact('project', 'stories'));
+}
 
 class projectController extends Controller {
 
@@ -49,8 +57,7 @@ class projectController extends Controller {
 	 */
 	public function show($id)
 	{
-		$project = project::findOrFail($id);
-		return view('projects.show', compact('project'));
+		return showProjectStory($id);
 	}
 
 	/**
@@ -60,7 +67,7 @@ class projectController extends Controller {
 	 * @return Response
 	 */
 	public function edit($id)
-	{
+	{		
 		$project = project::findOrFail($id);
 		return view('projects.edit', compact('project'));	
 	}
@@ -70,7 +77,7 @@ class projectController extends Controller {
 	 *
 	 * @param  int  $id
 	 * @return Response
-	 */
+	 */		
 	public function update($id, Request $request)
 	{
 		$input = $request->all();
@@ -78,7 +85,7 @@ class projectController extends Controller {
 		$project->name = $input['name'];
 		$project->save();
 
-		return redirect('project');
+		return showProjectStory($id);
 	}
 
 	/**

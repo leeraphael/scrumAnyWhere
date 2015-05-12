@@ -12,7 +12,7 @@
 					No
 				</th>
 				<th>
-					Story Name
+					Story
 				</th>
 				<th>
 					Last Updated Time

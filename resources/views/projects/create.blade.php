@@ -5,7 +5,7 @@
 <hr>
 {!! Form::open(['url'=>'project', 'class'=>'form-horizontal']) !!} 
 	<div class="form-group">
-		 <label for="name" class="col-sm-2 control-label">Project Name</label>
+		 <label for="name" class="col-sm-2 control-label">Project</label>
 		<div class="col-sm-10">
 			<input type="name" class="form-control" id="name" name="name" placeholder="Enter project name">
 		</div>

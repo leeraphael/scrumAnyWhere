@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\task;
 use App\story;
+use App\project;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -24,9 +26,12 @@ class storyController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create(Request $request)
 	{
-		return view('stories.create');
+		$projectId = $request->all()['projectId'];
+		$project = project::findOrFail($projectId);
+			
+		return view('stories.create', compact('project'));
 	}
 
 	/**
@@ -35,21 +40,20 @@ class storyController extends Controller {
 	 * @return Response
 	 */
 	public function store(Request $request)
-	{		
-
+	{	
 		$input = $request->all();
-		//TODO rework the projectId
-		$story = new story(['projectId'=>'1','name'=>$input['name']]);
+		$story = new story(['projectId'=>$input['projectId'],'name'=>$input['name']]);
 		$story->save();
 		
-		if(!empty($input['continue']))
-		{
-			return  view('stories.create');
-		}
-		else
-		{
-			return  redirect('story');
-		}		
+		$projectId = $request->all()['projectId'];
+		// collect project data
+		$project = project::findOrFail($projectId);
+		// collect project data
+		$stories = story::where('projectId', '=', $project->id)->get();
+
+		if(!empty($input['continue']))       return view('stories.create', compact('project'));
+		elseif (!empty($input['projectId'])) return view('projects.show', compact('project', 'stories'));
+		else                                 return  redirect('story');	
 	}
 
 	/**
@@ -60,8 +64,12 @@ class storyController extends Controller {
 	 */
 	public function show($id)
 	{
+		// collect project data
 		$story = story::findOrFail($id);
-		return view('stories.show', compact('story'));
+		// collect project data
+		//$stories = story::all();
+		$tasks = task::where('storyId', '=', $story->id)->get();
+		return view('stories.show', compact('story', 'tasks'));
 	}
 
 	/**
@@ -98,10 +106,20 @@ class storyController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($id, Request $request)
 	{
+		$input = $request->all();
+
 		$story = story::findOrFail($id);
 		$story->delete();
-		return redirect('story');
+
+		$projectId = $story->projectId;
+		// collect project data
+		$project = project::findOrFail($projectId);
+		// collect project data
+		$stories = story::where('projectId', '=', $project->id)->get();
+
+		if (!empty($input['back'])) return view('projects.show', compact('project', 'stories'));
+		else                        return redirect('story');	
 	}
 }

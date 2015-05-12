@@ -12,7 +12,7 @@
 					No
 				</th>
 				<th>
-					Project Name
+					Project
 				</th>
 				<th>
 					Last Updated Time

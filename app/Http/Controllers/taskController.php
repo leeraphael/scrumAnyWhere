@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Task;
+use App\story;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -24,9 +25,12 @@ class taskController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create(Request $request)
 	{
-		return view('tasks.create');
+		$storyId = $request->all()['storyId'];
+		$story = story::findOrFail($storyId);
+			
+		return view('tasks.create', compact('story'));
 	}
 
 	/**
@@ -37,10 +41,18 @@ class taskController extends Controller {
 	public function store(Request $request)
 	{		
 		$input = $request->all();
-		$task = new task(['name'=>$input['name'], 'projectId'=>'1']);
+		$task = new task(['storyId'=>$input['storyId'],'name'=>$input['name']]);
 		$task->save();
 		
-		return  redirect('task');
+		$storyId = $input['storyId'];
+		// collect story data
+		$story = story::findOrFail($storyId);
+		// collect task data
+		$tasks = task::where('storyId', '=', $story->id)->get();
+
+		if(!empty($input['continue']))     return view('tasks.create', compact('story'));		
+		elseif (!empty($input['storyId'])) return view('stories.show', compact('story', 'tasks'));		
+		else                               return redirect('task');		
 	}
 
 	/**
@@ -89,11 +101,20 @@ class taskController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($id, Request $request)
 	{
+		$input = $request->all();
+
 		$task = task::findOrFail($id);
 		$task->delete();
-		return redirect('task');
-	}
 
+		$storyId = $task->storyId;
+		// collect story data
+		$story = story::findOrFail($storyId);
+		// collect task data
+		$tasks = task::where('storyId', '=', $story->id)->get();
+	
+		if (!empty($input['back'])) return view('stories.show', compact('story', 'tasks'));		
+		else                        return redirect('task');		
+	}
 }

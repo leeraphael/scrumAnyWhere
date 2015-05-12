@@ -5,6 +5,7 @@
 		{!! Form::open(['method'=>'DELETE', 'action' => ['taskController@destroy', $task->id], 'class'=> 'form-horizontal']) !!} 
 		<a href="{{ action('taskController@edit', $task->id) }}" class="btn btn-info btn-md" role="button">Modified</a>
 		 <button type="submit" class="btn btn-danger">Delete</button>
+		 <input type="hidden" id="taskId" name="back" value="back">
 		{!! Form::close() !!}
 		<hr>
 	</div>
@@ -17,61 +18,12 @@
 					</div>
 				</div>
 				<div class="form-group">
-					 <label for="inputPassword3" class="col-sm-2 control-label">Task Name</label>
+					 <label for="inputPassword3" class="col-sm-2 control-label">Task</label>
 					<div class="col-sm-10">
 						<input type="name" class="form-control" id="inputEmail3" value="{{ $task->name }}" disabled />
 					</div>
 				</div>
 			</form>
-			<table class="table">
-				<thead>
-					<tr>
-						<th>
-							#
-						</th>
-						<th>
-							Product
-						</th>
-						<th>
-							Payment Taken
-						</th>
-						<th>
-							Status
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							1
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							01/04/2012
-						</td>
-						<td>
-							Default
-						</td>
-					</tr>
-					<tr class="danger">
-						<td>
-							4
-						</td>
-						<td>
-							TB - Monthly
-						</td>
-						<td>
-							04/04/2012
-						</td>
-						<td>
-							Call in to confirm
-						</td>
-					</tr>
-				</tbody>
-			</table>
-
 	</div>
 
 
