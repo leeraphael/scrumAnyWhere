@@ -17,6 +17,7 @@ class CreateStoriesTable extends Migration {
 			$table->increments('id');
 			$table->integer('projectId');
 			$table->string('name');
+			$table->longText('desc')->nullable();
 			$table->string('manDay')->nullable();
 			$table->string('status')->nullable();
 			$table->datetime('startDate')->nullable();

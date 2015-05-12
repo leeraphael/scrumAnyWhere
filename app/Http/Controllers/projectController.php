@@ -43,7 +43,8 @@ class projectController extends Controller {
 	public function store(Request $request)
 	{		
 		$input = $request->all();
-		$project = new project(['name'=>$input['name']]);
+		$project = new project(['name'=>$input['name'], 
+			                    'desc'=>$input['desc']]);
 		$project->save();
 		
 		return  redirect('project');
@@ -83,6 +84,7 @@ class projectController extends Controller {
 		$input = $request->all();
 		$project = project::findOrFail($id);
 		$project->name = $input['name'];
+		$project->desc = $input['desc'];
 		$project->save();
 
 		return showAll($id);

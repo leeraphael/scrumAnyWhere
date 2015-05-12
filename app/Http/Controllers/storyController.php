@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-function showStoryTask($id)
+function showAll($id)
 {
 	$story = story::findOrFail($id);
 	$tasks = task::where('storyId', '=', $story->id)->get();
@@ -69,7 +69,7 @@ class storyController extends Controller {
 	 */
 	public function show($id)
 	{
-		return showStoryTask($id);
+		return showAll($id);
 	}
 
 	/**
@@ -97,7 +97,7 @@ class storyController extends Controller {
 		$story->name = $input['name'];
 		$story->save();
 
-		return showStoryTask($id);
+		return showAll($id);
 	}
 
 	/**

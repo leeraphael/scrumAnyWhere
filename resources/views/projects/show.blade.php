@@ -23,7 +23,13 @@
 					<div class="col-sm-10">
 						<input type="name" class="form-control" id="inputEmail3" value="{{ $project->name }}" disabled />
 					</div>
-				</div>
+				</div>				
+				<div class="form-group">
+					<label for="name" class="col-sm-2 control-label">Description</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" id="desc" name="desc" readonly>{{ $project->desc }}</textarea>
+					</div>
+				</div>	
 			</form>
 	</div>			
 	<div class="col-sm-12 column">				

@@ -17,6 +17,7 @@ class CreateTasksTable extends Migration {
 			$table->increments('id');
 			$table->integer('storyId');
 			$table->string('name');
+			$table->longText('desc')->nullable();
 			$table->string('manDay')->nullable();
 			$table->string('status')->nullable();			
 			$table->datetime('startDate')->nullable();
