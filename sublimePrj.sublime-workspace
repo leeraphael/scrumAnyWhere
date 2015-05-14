@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"par",
+				"parent"
+			],
+			[
+				"proj",
+				"projectId"
+			],
+			[
+				"stor",
+				"stories"
+			],
+			[
+				"project",
+				"projectId"
+			],
+			[
+				"request",
+				"Request"
+			],
+			[
+				"I",
+				"Illuminate\\Html\\Request"
+			],
+			[
+				"create",
+				"createProjectRequest"
+			],
+			[
 				"pro",
 				"projectController"
+			],
+			[
+				"Re",
+				"Request"
+			],
+			[
+				"pr",
+				"project"
+			],
+			[
+				"projec",
+				"projects"
+			],
+			[
+				"home",
+				"homeController"
 			],
 			[
 				"acti",
@@ -16,19 +60,27 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/app.blade.php",
+			"file": "app/Http/Controllers/storyController.php",
 			"settings":
 			{
-				"buffer_size": 2954,
+				"buffer_size": 2850,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/project.blade.php",
+			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 455,
-				"line_ending": "Windows"
+				"buffer_size": 2714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/timeline.js",
+			"settings":
+			{
+				"buffer_size": 231504,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -39,17 +91,21 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 196.0,
-		"last_filter": "git add ",
+		"height": 392.0,
+		"last_filter": "ins",
 		"selected_items":
 		[
 			[
-				"git add ",
-				"Git: Add Current File"
+				"ins",
+				"Package Control: Install Package"
 			],
 			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"git add ",
+				"Git: Add Current File"
 			]
 		],
 		"width": 528.0
@@ -75,33 +131,89 @@
 	[
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Commands",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/bootstrap",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/js",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Requests",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views"
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/errors",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/misc",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/storage"
 	],
 	"file_history":
 	[
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/project.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/routes.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_07_045400_create_tasks_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/create.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/show.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/edit.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/projectController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/routes.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/user/register.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/project.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/storyController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/index.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_12_042351_create_stories_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_12_043355_create_comments_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_05_152700_create_projects_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/show.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/story.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/taskController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/show.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/phpunit/phpunit/src/Framework/Constraint/ArrayHasKey.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Config/Repository.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/nesbot/carbon/tests/StartEndOfTest.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Controller.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/app.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/index.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/create.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/task.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/symfony/console/Symfony/Component/Console/Output/StreamOutput.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/create.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/comment.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/edit.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/index.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Http/Request.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/config/app.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Support/Facades/Redis.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTestCase.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Requests/createProjectRequest.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Requests/Request.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/index.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/miscController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/misc/timeline.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/phpspec/prophecy/composer.json",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/home.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/compiled.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/doc/Model_sqlTableList.xlsx",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/config/database.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/homeController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/home.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/project.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/vlucas/phpdotenv/tests/fixtures/.env",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/HomeController.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/project.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/fonts/glyphicons-halflings-regular.eot",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/app.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/css/app.css",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/welcome.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/bootstrap/app.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Controller.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Auth/AuthController.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/home.blade.php",
 		"/C/DevTools/xmapp/htdocs/twbs/index.php"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -112,9 +224,26 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"showProjectStory",
+			"showStoryTask",
+			"where",
+			"join",
+			"where",
+			"all",
+			"create",
+			">\n",
+			"new",
+			"projects",
+			"project",
+			"Project",
+			"Task",
+			"TaskController",
+			"Project",
+			"illum",
+			"illu"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -122,11 +251,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"showAll",
+			"stories",
+			"Story",
+			"task",
+			"taskController",
+			"Task"
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
@@ -137,49 +272,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/app.blade.php",
+					"file": "app/Http/Controllers/storyController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2954,
+						"buffer_size": 2850,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2398,
-								2399
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 983.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/project.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 455,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								455,
-								455
+								634,
+								634
 							]
 						],
 						"settings":
@@ -192,7 +297,68 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2406,
+								2406
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1204.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/timeline.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10195,
+								10195
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -200,7 +366,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -237,7 +403,7 @@
 	"project": "sublimePrj.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -247,11 +413,251 @@
 		"selected_items":
 		[
 			[
-				"project",
-				"resources\\views\\project.blade.php"
+				"route",
+				"app\\Http\\routes.php"
 			],
 			[
-				"route",
+				"rou",
+				"app\\Http\\routes.php"
+			],
+			[
+				"regis",
+				"resources\\views\\user\\register.blade.php"
+			],
+			[
+				"register",
+				"resources\\views\\user\\register.blade.php"
+			],
+			[
+				"prpjectcon",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"projectcon",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"project",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"strocon",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"stor",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"story",
+				"app\\story.php"
+			],
+			[
+				"show",
+				"resources\\views\\tasks\\show.blade.php"
+			],
+			[
+				"task",
+				"app\\Http\\Controllers\\taskController.php"
+			],
+			[
+				"taskcon",
+				"app\\Http\\Controllers\\taskController.php"
+			],
+			[
+				"taask",
+				"vendor\\phpunit\\phpunit\\src\\Framework\\Constraint\\ArrayHasKey.php"
+			],
+			[
+				"task.",
+				"app\\task.php"
+			],
+			[
+				"stroycon",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"storcon",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"stro",
+				"vendor\\symfony\\console\\Symfony\\Component\\Console\\Output\\StreamOutput.php"
+			],
+			[
+				"create",
+				"resources\\views\\tasks\\create.blade.php"
+			],
+			[
+				"sto",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"pr",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"pro",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"index",
+				"resources\\views\\projects\\index.blade.php"
+			],
+			[
+				"sho",
+				"resources\\views\\projects\\show.blade.php"
+			],
+			[
+				"cshow",
+				"resources\\views\\stories\\show.blade.php"
+			],
+			[
+				"app.",
+				"resources\\views\\app.blade.php"
+			],
+			[
+				"crea",
+				"resources\\views\\stories\\create.blade.php"
+			],
+			[
+				"storycon",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"sory",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"taskcont",
+				"app\\Http\\Controllers\\taskController.php"
+			],
+			[
+				"edit",
+				"resources\\views\\projects\\edit.blade.php"
+			],
+			[
+				"proc",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"projeccon",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"edit.bl",
+				"resources\\views\\projects\\edit.blade.php"
+			],
+			[
+				"createpro",
+				"app\\Http\\Requests\\createProjectRequest.php"
+			],
+			[
+				"show.",
+				"resources\\views\\projects\\show.blade.php"
+			],
+			[
+				"rpojectcon",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"createpr",
+				"app\\Http\\Requests\\createProjectRequest.php"
+			],
+			[
+				"misccon",
+				"app\\Http\\Controllers\\miscController.php"
+			],
+			[
+				"time",
+				"resources\\views\\misc\\timeline.blade.php"
+			],
+			[
+				"app.b",
+				"resources\\views\\app.blade.php"
+			],
+			[
+				"tasks",
+				"app\\tasks.php"
+			],
+			[
+				"app.bl",
+				"resources\\views\\app.blade.php"
+			],
+			[
+				"index.b",
+				"resources\\views\\projects\\index.blade.php"
+			],
+			[
+				"idne",
+				"resources\\views\\projects\\index.blade.php"
+			],
+			[
+				"proecjcon",
+				"vendor\\phpspec\\prophecy\\composer.json"
+			],
+			[
+				"proejctcon",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"create.",
+				"resources\\views\\projects\\create.blade.php"
+			],
+			[
+				"projec",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"model",
+				"doc\\Model_sqlTableList.xlsx"
+			],
+			[
+				"prjectcon",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"homecont",
+				"app\\Http\\Controllers\\homeController.php"
+			],
+			[
+				"projectcontro",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"eloqu",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Auth\\EloquentUserProvider.php"
+			],
+			[
+				"createu",
+				"database\\migrations\\2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"data",
+				"config\\database.php"
+			],
+			[
+				"homecon",
+				"app\\Http\\Controllers\\homeController.php"
+			],
+			[
+				".env",
+				"vendor\\vlucas\\phpdotenv\\tests\\fixtures\\.env"
+			],
+			[
+				"home",
+				"app\\Http\\Controllers\\homeController.php"
+			],
+			[
+				"hoemcon",
+				"app\\Http\\Controllers\\homeController.php"
+			],
+			[
+				"rotue",
 				"app\\Http\\routes.php"
 			],
 			[
@@ -259,28 +665,20 @@
 				"app\\Http\\Controllers\\project.php"
 			],
 			[
-				"homecon",
-				"app\\Http\\Controllers\\HomeController.php"
-			],
-			[
 				"control",
 				"app\\Http\\Controllers\\Controller.php"
-			],
-			[
-				"home",
-				"resources\\views\\home.blade.php"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -299,7 +697,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 267.0,
+	"side_bar_width": 327.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 	<title>ScrumAnyWhere</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
@@ -22,59 +23,54 @@
 	<![endif]-->
 </head>
 <body>
-<div class="container">
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						 <span class="sr-only">Toggle navigation</span>
-						 <span class="icon-bar"></span>
-						 <span class="icon-bar"></span>
-						 <span class="icon-bar"></span>
-						 </button> <a class="navbar-brand" href="{{ action('homeController@index')}}">ScrumAnyWhere</a>
-				</div>
-				
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li>
-							<a href="{{ action('projectController@index')}}">Project List</a>
-						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menus<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="{{ action('storyController@index')}}">Story List</a>
-								</li>
-								<li>
-									<a href="{{ action('taskController@index')}}">Task List</a>
-								</li>								
-								<li class="divider"></li>
-								<li>
-									<a href="{{ action('miscController@timeline')}}">Timeline</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#">Login</a>
-						</li>
-						</li>
-					</ul>
-				</div>
-				
-			</nav>
-		</div>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			 <span class="sr-only">Toggle navigation</span>
+			 <span class="icon-bar"></span>
+			 <span class="icon-bar"></span>
+			 <span class="icon-bar"></span>
+			 </button> <a class="navbar-brand" href="{{ action('homeController@index')}}">ScrumAnyWhere</a>
 	</div>
-	<div class="row clearfix">
-		<div class="col-md-2 column">
+	
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
+			</li>
+			<li class="dropdown">
+				 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menus<strong class="caret"></strong></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="{{ action('projectController@index')}}">Project List</a>
+					</li>
+					<li>
+						<a href="{{ action('storyController@index')}}">Story List</a>
+					</li>
+					<li>
+						<a href="{{ action('taskController@index')}}">Task List</a>
+					</li>								
+					<li class="divider"></li>
+					<li>
+						<a href="{{ action('miscController@timeline')}}">Timeline</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<a href="#">Login</a>
+			</li>
+			</li>
+		</ul>
+	</div>
+	
+</nav>
+		<div class="col-md-3 column">
 			@yield('sidebar')			
 		</div>
-		<div class="col-md-10 column">
+		<div class="col-md-9 column">
 			@yield('main')
 		</div>
-	</div>
-</div>
 </body>
 </html>

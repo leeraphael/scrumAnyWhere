@@ -18,4 +18,8 @@ Route::resource('task', 'taskController');
 Route::resource('story', 'storyController');
 Route::resource('comment', 'commentController');
 
+
+
+// Specific route
 Route::get('timeline', 'miscController@timeline');
+Route::get('scrumBoard', 'scrumBoardController@index');
