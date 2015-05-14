@@ -18,17 +18,16 @@
   }
   .portlet {
     margin: 0 1em 1em 0;
+    font: 10;
     height: 130px;
     width: 130px;
     padding: 0.3em;
   }
   .portlet-header {
-    padding: 0.2em 0.3em;
+    padding: 0.0px 4.1px;
     margin-bottom: 0.5em;
-    position: relative;
   }
   .portlet-toggle {
-    position: absolute;
     top: 50%;
     right: 0;
     margin-top: -8px;
@@ -56,7 +55,7 @@
       .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
       .find( ".portlet-header" )
         .addClass( "ui-widget-header ui-corner-all" )
-        .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+        .prepend( "<span></span>");
  
     $( ".portlet-toggle" ).click(function() {
       var icon = $( this );
@@ -79,7 +78,7 @@
               Todo
             </th>
             <th class="active">
-              In Projress
+              In Progress
             </th>
             <th class="active">
               Done
