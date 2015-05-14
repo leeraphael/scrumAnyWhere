@@ -68,10 +68,10 @@
 		</div>
 	</div>
 	<div class="row clearfix">
-		<div class="col-md-4 column">
+		<div class="col-md-2 column">
 			@yield('sidebar')			
 		</div>
-		<div class="col-md-8 column">
+		<div class="col-md-10 column">
 			@yield('main')
 		</div>
 	</div>

@@ -3,23 +3,31 @@
 @section('head')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<style>
-	  #taskBox { float: left; width: 40%; min-height: 12em; }
+	  #taskBox { float: left; width: 10%; min-height: 12em; }
 	  .taskBox.custom-state-active { background: #eee; }
 	  .taskBox li { float: left; width: 120px; height: 120px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
 	  .taskBox li h5 { margin: 0 0 0.4em; cursor: move; }
 	  .taskBox li a { float: right; }
-	  .taskBox li img { width: 100%; cursor: move; }
 	 
-	  #doneArea { float: right; width: 60%; min-height: 18em; padding: 1%; }
+	  #toDoArea { float: left; width: 33%; min-height: 18em; padding: 1%; }
+	  #toDoArea h4 { line-height: 16px; margin: 0 0 0.4em; }
+	  #toDoArea h4 .ui-icon { float: left; }
+
+	  #inProgressArea { float: left; width: 33%; min-height: 18em; padding: 1%; }
+	  #inProgressArea h4 { line-height: 16px; margin: 0 0 0.4em; }
+	  #inProgressArea h4 .ui-icon { float: left; }
+
+	  #doneArea { float: left; width: 33%; min-height: 18em; padding: 1%; }
 	  #doneArea h4 { line-height: 16px; margin: 0 0 0.4em; }
 	  #doneArea h4 .ui-icon { float: left; }
-	  #doneArea .taskBox h5 {  }
   	</style>
 <script>
   $(function() {
     // there's the taskBox and the doneArea
     var $taskBox = $( "#taskBox" ),
-      $doneArea = $( "#doneArea" );
+      $doneArea = $( "#doneArea" ),
+      $toDoArea = $( "#toDoArea" ),
+      $inProgressArea = $( "#inProgressArea" );
  
     // let the taskBox items be draggable
     $( "li", $taskBox ).draggable({
@@ -35,7 +43,23 @@
       accept: "#taskBox > li",
       activeClass: "ui-state-highlight",
       drop: function( event, ui ) {
-        taskIsDone( ui.draggable );
+        taskIsDrop( ui.draggable, $doneArea );
+      }
+    });
+
+    $inProgressArea.droppable({
+      accept: "#taskBox > li",
+      activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+        taskIsDrop( ui.draggable, $inProgressArea );
+      }
+    });
+
+    $toDoArea.droppable({
+      accept: "#taskBox > li",
+      activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+        taskIsDrop( ui.draggable, $toDoArea );
       }
     });
  
@@ -49,15 +73,13 @@
     });
  
     // image deletion function
-    var undo_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
-    function taskIsDone( $item ) {
+    function taskIsDrop( $item, $targetArea ) {
       $item.fadeOut(function() {
-        var $list = $( "ul", $doneArea ).length ?
-          $( "ul", $doneArea ) :
-          $( "<ul class='taskBox ui-helper-reset'/>" ).appendTo( $doneArea );
+        var $list = $( "ul", $targetArea ).length ?
+          $( "ul", $targetArea ) :
+          $( "<ul id='taskBox' class='taskBox ui-helper-reset'/>" ).appendTo( $targetArea );
  
-        $item.find( "a.ui-icon-doneArea" ).remove();
-        $item.append( undo_icon ).appendTo( $list ).fadeIn(function() {
+        $item.appendTo( $list ).fadeIn(function() {
           $item
             .animate({ width: "120px", height: "120px" })
             .find( "img" )
@@ -88,7 +110,7 @@
         $target = $( event.target );
  
       if ( $target.is( "a.ui-icon-doneArea" ) ) {
-        taskIsDone( $item );
+        taskIsDrop( $item );
       } else if ( $target.is( "a.ui-icon-refresh" ) ) {
         taskIsToDo( $item );
       }
@@ -169,36 +191,41 @@
 	</div>
 
 <div class="ui-widget ui-helper-clearfix">
- 
-	<ul id="taskBox" class="taskBox ui-helper-reset ui-helper-clearfix">
-	  <li class="ui-widget-content ui-corner-tr">
-	    <h5 class="ui-widget-header">Task</h5>
-	    <div style="height=10px; width=10px;">content</div>   
-	    <a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
-	  </li>
-	  <li class="ui-widget-content ui-corner-tr">
-	    <h5 class="ui-widget-header">Task 2</h5>
-	    <div style="height=10px; width=10px;">content</div>
-	    <a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
-	  </li>
-	  <li class="ui-widget-content ui-corner-tr">
-	    <h5 class="ui-widget-header">Task 3</h5>
-	    <div style="height=10px; width=10px;">content</div>	    
-	    <a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
-	  </li>
-	  <li class="ui-widget-content ui-corner-tr">
-	    <h5 class="ui-widget-header">Task 4</h5>
-	    <div style="height=10px; width=10px;">content</div>
-	    <a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
-	  </li>
-	  <li class="ui-widget-content ui-corner-tr">
-	    <h5 class="ui-widget-header">Task 5</h5>
-	    <div style="height=10px; width=10px;">content</div>
-	    <a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
-	  </li>
-	</ul>
+	<div id="toDoArea" class="ui-widget-content ui-state-default">
+		<h4 class="ui-widget-header">Todo</h4>
+		<ul id="taskBox" class="taskBox ui-helper-reset ui-helper-clearfix">
+			<li class="ui-widget-content ui-corner-tr">
+				<h5 class="ui-widget-header">Task</h5>
+				<div>content</div>   
+				<a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
+			</li>
+				<li class="ui-widget-content ui-corner-tr">
+				<h5 class="ui-widget-header">Task 2</h5>
+				<div>content</div>
+				<a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
+			</li>
+				<li class="ui-widget-content ui-corner-tr">
+				<h5 class="ui-widget-header">Task 3</h5>
+				<div>content</div>  
+				<a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
+			</li>
+				<li class="ui-widget-content ui-corner-tr">
+				<h5 class="ui-widget-header">Task 4</h5>
+				<div>content</div>
+				<a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
+			</li>
+				<li class="ui-widget-content ui-corner-tr">
+				<h5 class="ui-widget-header">Task 5</h5>
+				<div>content</div>
+				<a href="link/to/doneArea/script/when/we/have/js/off" title="Done" class="ui-icon ui-icon-doneArea">Delete image</a>
+			</li>
+		</ul>
+	</div>
+	<div id="inProgressArea" class="ui-widget-content ui-state-default">
+	  <h4 class="ui-widget-header">In Progress</h4>
+	</div>
 	<div id="doneArea" class="ui-widget-content ui-state-default">
-	  <h4 class="ui-widget-header"><span class="ui-icon ui-icon-doneArea">Done</span> Done</h4>
+	  <h4 class="ui-widget-header">Done</h4>
 	</div>
 </div>
 @endsection
