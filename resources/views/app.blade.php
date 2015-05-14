@@ -66,10 +66,10 @@
 	</div>
 	
 </nav>
-		<div class="col-md-3 column">
+		<div class="col-md-2 column">
 			@yield('sidebar')			
 		</div>
-		<div class="col-md-9 column">
+		<div class="col-md-10 column">
 			@yield('main')
 		</div>
 </body>

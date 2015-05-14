@@ -46,7 +46,9 @@ class taskController extends Controller {
 	public function store(Request $request)
 	{		
 		$input = $request->all();
-		$task = new task(['storyId'=>$input['storyId'],'name'=>$input['name']]);
+		$task = new task(['storyId'=>$input['storyId'],
+			              'name'=>$input['name'],
+			              'status'=> 'todo']);
 		$task->save();
 		
 		$storyId = $input['storyId'];
