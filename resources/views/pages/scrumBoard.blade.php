@@ -6,7 +6,7 @@
   body {
     min-width: 520px;
   }
-  .storyBox {
+  .storyBoxContainer {
     width: 90px;
     float: left;    
     padding-bottom: 100px;
@@ -14,6 +14,8 @@
   .taskBox {
     width: 130px;
     float: left;    
+    margin-top: 5px;
+    margin-left: 10px;
     padding-bottom: 50px;
   }
   .portlet {
@@ -41,6 +43,39 @@
     height: 130px;
     width: 130px;
   }
+
+  .storyBox {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-top: 5px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #000;
+  -ms-box-shadow: inset 0 0 3px #000;
+  box-shadow: inset 0 0 3px #000;
+  text-align: center;
+  cursor: move;
+}
+.storyBox header {
+  color: #fff;
+  text-shadow: #000 0 1px;
+  box-shadow: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-bottom: 1px solid #aaa;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -ms-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
   </style>
   <script>
   $(function() {
@@ -89,9 +124,12 @@
         @foreach($dataSet as $data)
           <tr>
             <td>
-              <div class="storyBox">
-                <a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->name }}</a>
-              </div>            
+              <div class="storyBoxContainer">
+                
+                <div class="storyBox" draggable="true"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
+                  {{ $data['story']->name }}
+                </div>
+              </div> 
             </td>
             <td>
               <div class="taskBox">
