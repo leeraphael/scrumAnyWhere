@@ -17,6 +17,13 @@ class webServiceController extends Controller {
 		$input = $request->all();
 		$task = task::findOrFail($input['taskId']);
 		$task->status = $input['status'];
+		if($input['status'] == "go")
+		{
+			$task->startDate = date('Y-m-d H:i:s');
+		}
+		elseif ($input['status'] == "done") {
+			$task->doneDate = date('Y-m-d H:i:s');
+		}
 		$task->owner = $input['owner'];
 		$task->save();
 
