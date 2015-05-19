@@ -48,6 +48,9 @@ class taskController extends Controller {
 		$input = $request->all();
 		$task = new task(['storyId'=>$input['storyId'],
 			              'name'=>$input['name'],
+			              'color'=>$input['color'],
+			              'manDay'=>$input['manDay'],
+			              'desc'=>$input['desc'],
 			              'status'=> 'todo']);
 		$task->save();
 		
@@ -96,6 +99,9 @@ class taskController extends Controller {
 		$input = $request->all();
 		$task = task::findOrFail($id);
 		$task->name = $input['name'];
+		$task->color = $input['color'];
+		$task->manDay = $input['manDay'];
+		$task->desc = $input['desc'];
 		$task->save();
 
 		return showAll($id);

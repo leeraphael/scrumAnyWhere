@@ -7,14 +7,32 @@
 	<input type="hidden" id="projectId" name="storyId" value="{{ $story->id }}">
 	<div class="form-group">
 		 <label for="name" class="col-sm-2 control-label">Story</label>
-		<div class="col-sm-10">
+		<div class="col-sm-3">
 			<input type="name" class="form-control" id="storyName" name="storyName" value="{{ $story->name }}" disabled>
 		</div>			
 	</div>	
 	<div class="form-group">
 		 <label for="name" class="col-sm-2 control-label">Task</label>
-		<div class="col-sm-10">
+		<div class="col-sm-3">
 			<input type="name" class="form-control" id="name" name="name" placeholder="Enter Task name">
+		</div>
+	</div>	
+	<div class="form-group">
+		 <label for="name" class="col-sm-2 control-label">Man Day</label>
+		<div class="col-sm-2">
+			{!!	Form::selectRange('manDay', 1, 10, 2, ['class' => 'form-control']) !!}
+		</div>
+	</div>	
+	<div class="form-group">
+		 <label for="name" class="col-sm-2 control-label">Color</label>
+		<div class="col-sm-2">
+			{!!	Form::select('color', array('fdf28a' => 'Yellow', 'b6dcff' => 'Blue'), 'fdf28a', ['class' => 'form-control']) !!}
+		</div>
+	</div>	
+	<div class="form-group">
+		 <label for="name" class="col-sm-2 control-label">Description</label>
+		<div class="col-sm-5">
+		<textarea class="form-control" id="name" name="desc"></textarea>
 		</div>
 	</div>	
 	<div class="form-group">

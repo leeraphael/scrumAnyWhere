@@ -150,7 +150,7 @@
             <td>
               <div class="taskBox" id="todo">
               @foreach($data['tasksTodo'] as $task)
-                <div class="portlet" id="{{$task->id}}">
+                <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
                   <div class="portlet-owner">{{ $task->owner }}</div>
@@ -161,7 +161,7 @@
             <td>
               <div class="taskBox" id="go">
                 @foreach($data['tasksGo'] as $task)
-                <div class="portlet" id="{{$task->id}}">
+                <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
                   <div class="portlet-owner">{{ $task->owner }}</div>
@@ -172,7 +172,7 @@
             <td>
               <div class="taskBox" id="done">
                 @foreach($data['tasksDone'] as $task)
-                <div class="portlet" id="{{$task->id}}">
+                <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
                   <div class="portlet-owner">{{ $task->owner }}</div>

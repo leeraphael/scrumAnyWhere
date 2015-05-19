@@ -20,6 +20,7 @@ class task extends Model {
 						   'name',
 						   'desc',
 						   'manDay',
+						   'color',
 						   'status',
 						   'startDate',
 						   'doneDate'];
