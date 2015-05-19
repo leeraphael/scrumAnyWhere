@@ -87,19 +87,20 @@
       connectWith: ".taskBox", 
       handle: ".portlet-header",
       cancel: ".portlet-toggle",
-      udpate: function(event, ui) {
-        var data = $(this).sortable('serialize');
-
-        // POST to server using $.post or $.ajax
-        $.ajax({
-            data: data,
-            type: 'POST',
-            url: 'scrumBoardUpdate'
+      placeholder: "portlet-placeholder ui-corner-all",
+      update : function (event, ui) {
+        if(this === ui.item.parent()[0])
+        {          
+          var order = $(this).sortable('serialize');
+          $('#test1').text(ui.item.context.id);
+          $.post( 'updateTask', { taskId: ui.item.context.id,
+                                  status: ui.item.parent()[0].id,
+                                  owner:  "Raphael",
+                                  _token: "{{ csrf_token() }}" });        
         }
-      },
-      placeholder: "portlet-placeholder ui-corner-all"
+      }
     });
- 
+
     $( ".portlet" )
       .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
       .find( ".portlet-header" )
@@ -116,7 +117,6 @@
 @endsection
 
 @section('main')
-
 <table class="table table-bordered">
         <thead>
           <tr>
@@ -148,32 +148,34 @@
               </div> 
             </td>
             <td>
-              <div class="taskBox">
+              <div class="taskBox" id="todo">
               @foreach($data['tasksTodo'] as $task)
-                <div class="portlet">
+                <div class="portlet" id="{{$task->id}}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
-                  <div class="portlet-owner">Raphael</div>
+                  <div class="portlet-owner">{{ $task->owner }}</div>
                 </div>
               @endforeach   
               </div>
             </td>
             <td>
-              <div class="taskBox">
+              <div class="taskBox" id="go">
                 @foreach($data['tasksGo'] as $task)
-                <div class="portlet">
+                <div class="portlet" id="{{$task->id}}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
+                  <div class="portlet-owner">{{ $task->owner }}</div>
                 </div>
               @endforeach   
               </div>
             </td>
             <td>
-              <div class="taskBox">
+              <div class="taskBox" id="done">
                 @foreach($data['tasksDone'] as $task)
-                <div class="portlet">
+                <div class="portlet" id="{{$task->id}}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
+                  <div class="portlet-owner">{{ $task->owner }}</div>
                 </div>
               @endforeach   
               </div>

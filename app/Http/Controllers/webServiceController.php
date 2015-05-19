@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use App\task;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -12,9 +12,15 @@ class webServiceController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-		return "hello";
+	public function updateTask(Request $request)
+	{		
+		$input = $request->all();
+		$task = task::findOrFail($input['taskId']);
+		$task->status = $input['status'];
+		$task->owner = $input['owner'];
+		$task->save();
+
+		return;
 	}
 
 	/**

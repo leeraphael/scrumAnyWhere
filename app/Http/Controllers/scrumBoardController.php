@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 function getProject()
 {
 	//TODO get project list from DB
-	$project = ['8']; 
+	$project = ['1']; 
 	return $project;
 }
 class scrumBoardController extends Controller {
@@ -23,7 +23,7 @@ class scrumBoardController extends Controller {
 	{
 		$project = getProject()[0];
 		$dataSet = [];
-		$stories = story::where('projectId', '=', '8')->get();
+		$stories = story::where('projectId', '=', $project)->get();
 		foreach($stories as $story){
 			$tasksTodo = task::where('storyId', '=', $story->id)
 					    	   ->Where('status', 'todo')
