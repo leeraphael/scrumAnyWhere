@@ -36,6 +36,11 @@
   .portlet-owner {
     font-size:small;
     text-align: center;
+  }    
+  .portlet-foot {
+    font-size:small;
+    text-align: right;
+    margin-right: 1px;
   }
   .portlet-toggle {
     top: 50%;
@@ -45,7 +50,7 @@
   .portlet-content {
     text-align: center;
     padding: 0px;
-    height: 42px;
+    height: 30px;
   }
   .portlet-placeholder {
     border: 2px dotted yellow;
@@ -69,7 +74,7 @@
   color: #fff;
   text-shadow: #000 0 1px;
   box-shadow: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 5px;
   border-bottom: 1px solid #aaa;
   border-top-left-radius: 10px;
@@ -78,8 +83,13 @@
 .storyBox-name {
     font-size: large;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
   }
+.storyBox-foot {
+  font-size:small;
+  text-align: right;
+  margin-right: 10px;
+}
   </style>
   <script>
   $(function() {
@@ -144,6 +154,7 @@
                   <div class="portlet-owner">4d</div>     
                   <div class="portlet-owner">2015-05-19</div>                    
                   <div class="portlet-owner">~2015-05-19</div>
+                  <div class="storyBox-foot"><a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button"><span class="glyphicon glyphicon-plus-sign"></span></a></div>
                 </div>
               </div> 
             </td>
@@ -154,6 +165,7 @@
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
                   <div class="portlet-owner">{{ $task->owner }}</div>
+                  <div class="portlet-foot"><a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button"><span class="glyphicon glyphicon-minus-sign"></span></a></div>
                 </div>
               @endforeach   
               </div>
