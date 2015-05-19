@@ -20,6 +20,10 @@ class CreateStoriesTable extends Migration {
 			$table->longText('desc')->nullable();
 			$table->string('manDay')->nullable();
 			$table->string('status')->nullable();
+			// Status:
+			// 			1. todo
+			// 			2. go
+			// 			3. done
 			$table->datetime('startDate')->nullable();
 			$table->datetime('doneDate')->nullable();
 			$table->timestamps();

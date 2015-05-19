@@ -19,15 +19,23 @@
     padding-bottom: 50px;
   }
   .portlet {
-    margin: 0 1em 1em 0;
-    font: 10;
-    height: 130px;
-    width: 130px;
-    padding: 0.3em;
+    margin: 0 1em 1em 0;    
+    height: 100px;
+    width: 150px;
+    padding: 5px 6px 0px 6px;  
+    border-radius: 10px;
   }
   .portlet-header {
+    font-size:small;
+    text-align: right;
+    width: 136px;
+    height: 20px;
     padding: 0.0px 4.1px;
     margin-bottom: 0.5em;
+  }
+  .portlet-owner {
+    font-size:small;
+    text-align: center;
   }
   .portlet-toggle {
     top: 50%;
@@ -35,13 +43,15 @@
     margin-top: -8px;
   }
   .portlet-content {
-    padding: 0.4em;
+    text-align: center;
+    padding: 0px;
+    height: 42px;
   }
   .portlet-placeholder {
     border: 2px dotted yellow;
     margin: 0 1em 1em 0;
-    height: 130px;
-    width: 130px;
+    height: 100px;
+    width: 150px;
   }
 
   .storyBox {
@@ -50,12 +60,7 @@
   float: left;
   margin-top: 5px;
   background-color: #fff;
-  -webkit-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 3px #000;
-  -ms-box-shadow: inset 0 0 3px #000;
   box-shadow: inset 0 0 3px #000;
   text-align: center;
   cursor: move;
@@ -67,15 +72,14 @@
   margin-bottom: 20px;
   padding: 5px;
   border-bottom: 1px solid #aaa;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -ms-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -ms-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
 }
+.storyBox-name {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 10px;
+  }
   </style>
   <script>
   $(function() {
@@ -83,6 +87,16 @@
       connectWith: ".taskBox", 
       handle: ".portlet-header",
       cancel: ".portlet-toggle",
+      udpate: function(event, ui) {
+        var data = $(this).sortable('serialize');
+
+        // POST to server using $.post or $.ajax
+        $.ajax({
+            data: data,
+            type: 'POST',
+            url: 'scrumBoardUpdate'
+        }
+      },
       placeholder: "portlet-placeholder ui-corner-all"
     });
  
@@ -124,10 +138,12 @@
         @foreach($dataSet as $data)
           <tr>
             <td>
-              <div class="storyBoxContainer">
-                
+              <div class="storyBoxContainer">                
                 <div class="storyBox" draggable="true"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
-                  {{ $data['story']->name }}
+                  <div class="storyBox-name">{{ strlen($data['story']->name)>15?substr($data['story']->name, 0, 15):$data['story']->name }}</div>   
+                  <div class="portlet-owner">4d</div>     
+                  <div class="portlet-owner">2015-05-19</div>                    
+                  <div class="portlet-owner">~2015-05-19</div>
                 </div>
               </div> 
             </td>
@@ -137,6 +153,7 @@
                 <div class="portlet">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
+                  <div class="portlet-owner">Raphael</div>
                 </div>
               @endforeach   
               </div>

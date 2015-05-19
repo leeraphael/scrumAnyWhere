@@ -16,6 +16,11 @@ class task extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['storyId', 'name'];
-
+	protected $fillable = ['storyId', 
+						   'name',
+						   'desc',
+						   'manDay',
+						   'status',
+						   'startDate',
+						   'doneDate'];
 }

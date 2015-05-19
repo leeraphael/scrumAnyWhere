@@ -23,3 +23,4 @@ Route::resource('comment', 'commentController');
 // Specific route
 Route::get('timeline', 'miscController@timeline');
 Route::get('scrumBoard', 'scrumBoardController@index');
+Route::post('scrumBoardUpdate', 'webServiceController@index');

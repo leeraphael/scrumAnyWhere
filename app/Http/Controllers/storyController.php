@@ -47,7 +47,7 @@ class storyController extends Controller {
 	public function store(Request $request)
 	{	
 		$input = $request->all();
-		$story = new story(['projectId'=>$input['projectId'],'name'=>$input['name']]);
+		$story = new story(['projectId'=>$input['projectId'],'name'=>$input['name'], 'status'=>'todo']);
 		$story->save();
 		
 		$projectId = $request->all()['projectId'];
