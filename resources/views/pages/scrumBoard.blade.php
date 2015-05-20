@@ -102,13 +102,13 @@
       placeholder: "portlet-placeholder ui-corner-all",
       update : function (event, ui) {
         if(this === ui.item.parent()[0])
-        {          
-          var order = $(this).sortable('serialize');
+        { 
           $('#test1').text(ui.item.context.id);
           $.post( 'updateTask', { taskId: ui.item.context.id,
                                   status: ui.item.parent()[0].id,
-                                  owner:  "Raphael",
-                                  _token: "{{ csrf_token() }}" });        
+                                  owner:  "{{ session('username')}}",
+                                  _token: "{{ csrf_token() }}" });    
+
         }
       }
     });

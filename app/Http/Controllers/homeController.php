@@ -14,6 +14,8 @@ class homeController extends Controller {
 	 */
 	public function index()
 	{
+		//TODO set session here 
+		session(['username'=>'Raphael']);
 		return view('pages/home');
 	}
 
