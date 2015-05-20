@@ -197,3 +197,28 @@
         </tbody>
       </table>
 @endsection
+
+
+
+@section('sidebar')
+<script>
+function explode(){
+  $.post( 'updateLog', { _token: "{{ csrf_token() }}" })
+    .done(function(data){ 
+      $('#log1').prepend('<li>'+data+'</li>');
+      if($( "#log1 li" ).size()>10)
+      {
+        $("#log1 li:last").remove();
+      }
+    });    
+  ;
+  setTimeout(explode, 10000);
+}
+setTimeout(explode, 1);
+</script>
+<ul id="log1">
+  <li>
+    Raphael created the task
+  </li>
+</ul>
+@endsection

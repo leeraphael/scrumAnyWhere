@@ -15,8 +15,7 @@ class CreateCommentsTable extends Migration {
 		Schema::create('comments', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('type'); //from project, story, task
-			$table->string('typeId'); // ID from each type
+			$table->string('username')->nullable();
 			$table->longText('desc')->nullable();
 			$table->timestamps();
 		});

@@ -38,4 +38,9 @@ class webServiceController extends Controller {
 		return;
 	}
 
+	public function updateLog(Request $request)
+	{		
+		return "Hello";
+	}
+
 }

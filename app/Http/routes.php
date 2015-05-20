@@ -10,18 +10,31 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group(array('before' => 'auth'), function()
+{
+	Route::resource('project', 'projectController');
+	Route::resource('task', 'taskController');
+	Route::resource('story', 'storyController');
+	Route::resource('comment', 'commentController');
+
+	// Specific route
+	Route::get('timeline', 'miscController@timeline');
+	Route::get('scrumBoard', 'scrumBoardController@index');
+	Route::post('updateTask', 'webServiceController@updateTask');
+	Route::post('deleteTask', 'webServiceController@deleteTask');
+	Route::post('updateLog', 'webServiceController@updateLog');    
+});
 
 Route::get('/', 'homeController@index');
+Route::get('home', 'homeController@index');
 
-Route::resource('project', 'projectController');
-Route::resource('task', 'taskController');
-Route::resource('story', 'storyController');
-Route::resource('comment', 'commentController');
+Route::filter('auth', function()
+{
+    if (Auth::guest()) return Redirect::to('auth/login');
+});
 
-
-
-// Specific route
-Route::get('timeline', 'miscController@timeline');
-Route::get('scrumBoard', 'scrumBoardController@index');
-Route::post('updateTask', 'webServiceController@updateTask');
-Route::post('deleteTask', 'webServiceController@deleteTask');
+//auth
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
