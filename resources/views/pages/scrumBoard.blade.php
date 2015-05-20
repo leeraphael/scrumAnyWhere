@@ -103,8 +103,10 @@
       update : function (event, ui) {
         if(this === ui.item.parent()[0])
         { 
-          $('#test1').text(ui.item.context.id);
-          $.post( 'updateTask', { taskId: ui.item.context.id,
+          // update task owner
+          $('#owner_'+ui.item.context.id).text("{{ session('username')}}");
+          //post to server to update DB
+          $.post( 'updateTask', { taskId: ui.item.context.id.split("_")[1],
                                   status: ui.item.parent()[0].id,
                                   owner:  "{{ session('username')}}",
                                   _token: "{{ csrf_token() }}" });    
@@ -123,6 +125,15 @@
       var icon = $( this );
       icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
       icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+    });
+
+    $('[id^=delete_]').click(function() {
+      var taskId = $(this)[0].id.split("_")[1];
+      // update task owner
+      $('#task_'+taskId).remove();
+      // //post to server to update DB
+      $.post( 'deleteTask', { taskId: taskId,
+                              _token: "{{ csrf_token() }}" }); 
     });
   });
   </script>
@@ -163,13 +174,12 @@
             <td>
               <div class="taskBox" id="todo">
               @foreach($data['tasksTodo'] as $task)
-                <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
+                <div class="portlet" id="task_{{$task->id}}" style="background:#{{ $task->color }}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
-                  <div class="portlet-owner">{{ $task->owner }}
-                  <div class="portlet-foot"><a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button"><span class="glyphicon glyphicon-minus-sign"></span></a></div>
-                  </div>
-                  
+                  <div class="portlet-owner"><span id="owner_{{$task->id}}" >{{ $task->owner }}</span>
+                  <div class="portlet-foot"><span id="delete_{{$task->id}}" class="glyphicon glyphicon-minus-sign"></span></div>
+                  </div>                  
                 </div>
               @endforeach   
               </div>

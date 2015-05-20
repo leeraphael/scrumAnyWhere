@@ -24,3 +24,4 @@ Route::resource('comment', 'commentController');
 Route::get('timeline', 'miscController@timeline');
 Route::get('scrumBoard', 'scrumBoardController@index');
 Route::post('updateTask', 'webServiceController@updateTask');
+Route::post('deleteTask', 'webServiceController@deleteTask');
