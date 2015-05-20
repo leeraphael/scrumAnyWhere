@@ -40,7 +40,9 @@
   .portlet-foot {
     font-size:small;
     text-align: right;
-    margin-right: 1px;
+    margin-right: 0px;
+    margin-top: 9px;
+    float: right;  
   }
   .portlet-toggle {
     top: 50%;
@@ -50,7 +52,7 @@
   .portlet-content {
     text-align: center;
     padding: 0px;
-    height: 30px;
+    height: 38px;
   }
   .portlet-placeholder {
     border: 2px dotted yellow;
@@ -164,8 +166,10 @@
                 <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
                   <div class="portlet-header">{{ $task->id }}</div>
                   <div class="portlet-content">{{ $task->name }}</div>
-                  <div class="portlet-owner">{{ $task->owner }}</div>
+                  <div class="portlet-owner">{{ $task->owner }}
                   <div class="portlet-foot"><a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button"><span class="glyphicon glyphicon-minus-sign"></span></a></div>
+                  </div>
+                  
                 </div>
               @endforeach   
               </div>
