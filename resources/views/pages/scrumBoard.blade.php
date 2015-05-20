@@ -174,35 +174,30 @@
             <td>
               <div class="taskBox" id="todo">
               @foreach($data['tasksTodo'] as $task)
-                <div class="portlet" id="task_{{$task->id}}" style="background:#{{ $task->color }}">
-                  <div class="portlet-header">{{ $task->id }}</div>
-                  <div class="portlet-content">{{ $task->name }}</div>
-                  <div class="portlet-owner"><span id="owner_{{$task->id}}" >{{ $task->owner }}</span>
-                  <div class="portlet-foot"><span id="delete_{{$task->id}}" class="glyphicon glyphicon-minus-sign"></span></div>
-                  </div>                  
-                </div>
+                @include('pages.scrumBoardTable', ['taskId' => $task->id,
+                                                   'taskName' => $task->name,
+                                                   'taskColor' => $task->color,
+                                                   'taskOwner' => $task->owner])
               @endforeach   
               </div>
             </td>
             <td>
               <div class="taskBox" id="go">
                 @foreach($data['tasksGo'] as $task)
-                <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
-                  <div class="portlet-header">{{ $task->id }}</div>
-                  <div class="portlet-content">{{ $task->name }}</div>
-                  <div class="portlet-owner">{{ $task->owner }}</div>
-                </div>
+                @include('pages.scrumBoardTable', ['taskId' => $task->id,
+                                                   'taskName' => $task->name,
+                                                   'taskColor' => $task->color,
+                                                   'taskOwner' => $task->owner])
               @endforeach   
               </div>
             </td>
             <td>
               <div class="taskBox" id="done">
                 @foreach($data['tasksDone'] as $task)
-                <div class="portlet" id="{{$task->id}}" style="background:#{{ $task->color }}">
-                  <div class="portlet-header">{{ $task->id }}</div>
-                  <div class="portlet-content">{{ $task->name }}</div>
-                  <div class="portlet-owner">{{ $task->owner }}</div>
-                </div>
+                @include('pages.scrumBoardTable', ['taskId' => $task->id,
+                                                   'taskName' => $task->name,
+                                                   'taskColor' => $task->color,
+                                                   'taskOwner' => $task->owner])
               @endforeach   
               </div>
             </td>
