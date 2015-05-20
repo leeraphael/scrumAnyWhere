@@ -173,32 +173,23 @@
             </td>
             <td>
               <div class="taskBox" id="todo">
-              @foreach($data['tasksTodo'] as $task)
-                @include('pages.scrumBoardTable', ['taskId' => $task->id,
-                                                   'taskName' => $task->name,
-                                                   'taskColor' => $task->color,
-                                                   'taskOwner' => $task->owner])
-              @endforeach   
+                @foreach($data['tasksTodo'] as $task)
+                  @include('pages.scrumBoardTable')
+                @endforeach   
               </div>
             </td>
             <td>
               <div class="taskBox" id="go">
                 @foreach($data['tasksGo'] as $task)
-                @include('pages.scrumBoardTable', ['taskId' => $task->id,
-                                                   'taskName' => $task->name,
-                                                   'taskColor' => $task->color,
-                                                   'taskOwner' => $task->owner])
-              @endforeach   
+                  @include('pages.scrumBoardTable')
+                @endforeach   
               </div>
             </td>
             <td>
               <div class="taskBox" id="done">
                 @foreach($data['tasksDone'] as $task)
-                @include('pages.scrumBoardTable', ['taskId' => $task->id,
-                                                   'taskName' => $task->name,
-                                                   'taskColor' => $task->color,
-                                                   'taskOwner' => $task->owner])
-              @endforeach   
+                  @include('pages.scrumBoardTable')
+                @endforeach   
               </div>
             </td>
           </tr>

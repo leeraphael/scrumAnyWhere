@@ -1,7 +1,7 @@
-<div class="portlet" id="task_{{$taskId}}" style="background:#{{ $taskColor }}">
-  <div class="portlet-header">{{ $taskId }}</div>
-  <div class="portlet-content">{{ $taskName }}</div>
-  <div class="portlet-owner"><span id="owner_{{$taskId}}" >{{ $taskOwner }}</span>
-  <div class="portlet-foot"><span id="delete_{{$taskId}}" class="glyphicon glyphicon-minus-sign"></span></div>
-  </div>                  
-</div>
+  <div class="portlet" id="task_{{$task->id}}" style="background:#{{ $task->color }}">
+    <div class="portlet-header">{{ $task->id }}</div>
+    <div class="portlet-content">{{ $task->name }}</div>
+    <div class="portlet-owner"><span id="owner_{{$task->id}}" >{{ $task->owner }}</span>
+    <div class="portlet-foot"><span id="delete_{{$task->id}}" class="glyphicon glyphicon-minus-sign"></span></div>
+    </div>                  
+  </div>
