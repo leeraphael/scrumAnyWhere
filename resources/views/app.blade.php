@@ -40,7 +40,7 @@
 				<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
 			</li>
 			<li class="dropdown">
-				 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menus<strong class="caret"></strong></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management<strong class="caret"></strong></a>
 				<ul class="dropdown-menu">
 					<li>
 						<a href="{{ action('projectController@index')}}">Project List</a>
@@ -55,7 +55,16 @@
 					<li>
 						<a href="{{ action('miscController@timeline')}}">Timeline</a>
 					</li>
-				</ul>
+				</ul>				
+			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<strong class="caret"></strong></a>
+				<ul class="dropdown-menu">					
+					<li>
+						<a href="#">TelecomES</a>
+					</li>
+				</ul>				
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
