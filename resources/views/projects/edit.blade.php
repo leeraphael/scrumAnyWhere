@@ -6,19 +6,19 @@
 	{!! Form::open(['method'=>'PUT', 'action' => ['projectController@update', $project->id], 'class'=> 'form-horizontal']) !!} 
 	<div class="form-group">
 		 <label for="projectId" class="col-sm-2 control-label">Project Id</label>
-		<div class="col-sm-10">
+		<div class="col-sm-3">
 			<input type="id" class="form-control" id="projectId" value="{{ $project->id }}" disabled />
 		</div>
 	</div>
 	<div class="form-group">
 		 {!! Form::label('name', 'Project Name', ['class'=>'col-sm-2 control-label']) !!}
-		<div class="col-sm-10">
+		<div class="col-sm-3">
 			{!! Form::text('name', $project->name, ['class'=>'form-control']) !!}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="name" class="col-sm-2 control-label">Description</label>
-		<div class="col-sm-10">
+		<div class="col-sm-5">
 			<textarea class="form-control" id="desc" name="desc">{{ $project->desc }}</textarea>
 		</div>
 	</div>	

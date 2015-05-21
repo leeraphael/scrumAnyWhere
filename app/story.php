@@ -17,5 +17,9 @@ class story extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['projectId', 'name'];
+	protected $fillable = ['projectId', 
+	                       'name',
+	                       'manDay',
+	                       'startDate',
+	                       'doneDate'];
 }

@@ -14,19 +14,19 @@
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
 					 <label for="inputEmail3" class="col-sm-2 control-label">Project Id</label>
-					<div class="col-sm-10">
+					<div class="col-sm-3">
 						<input type="id" class="form-control" id="inputEmail3" value="{{ $project->id }}" disabled />
 					</div>
 				</div>
 				<div class="form-group">
 					 <label for="inputPassword3" class="col-sm-2 control-label">Project</label>
-					<div class="col-sm-10">
+					<div class="col-sm-3">
 						<input type="name" class="form-control" id="inputEmail3" value="{{ $project->name }}" disabled />
 					</div>
 				</div>				
 				<div class="form-group">
 					<label for="name" class="col-sm-2 control-label">Description</label>
-					<div class="col-sm-10">
+					<div class="col-sm-5">
 						<textarea class="form-control" id="desc" name="desc" readonly>{{ $project->desc }}</textarea>
 					</div>
 				</div>	
@@ -46,6 +46,12 @@
 						Story
 					</th>
 					<th>
+						Start Date
+					</th>
+					<th>
+						Man Day
+					</th>
+					<th>
 						Last Updated Time
 					</th>
 				</tr>
@@ -58,6 +64,12 @@
 					</td>
 					<td>
 						<a href="{{ url('/story', $story->id) }}">{{ $story->name }}</a>
+					</td>
+					<td>
+						{{ $story->startDate }}
+					</td>
+					<td>
+						{{ $story->manDay }}
 					</td>
 					<td>
 						{{ $story->updated_at }}

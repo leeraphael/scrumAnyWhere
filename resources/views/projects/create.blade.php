@@ -6,13 +6,13 @@
 {!! Form::open(['url'=>'project', 'class'=>'form-horizontal']) !!} 
 	<div class="form-group">
 		<label for="name" class="col-sm-2 control-label">Project</label>
-		<div class="col-sm-10">
+		<div class="col-sm-3">
 			<input type="name" class="form-control" id="name" name="name" placeholder="Enter project name">
 		</div>
 	</div>	
 	<div class="form-group">
 		<label for="name" class="col-sm-2 control-label">Description</label>
-		<div class="col-sm-10">
+		<div class="col-sm-5">
 			<textarea class="form-control" id="desc" name="desc" placeholder="Enter more details"></textarea>
 		</div>
 	</div>	

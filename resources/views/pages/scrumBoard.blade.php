@@ -166,9 +166,9 @@
               <div class="storyBoxContainer">                
                 <div class="storyBox" draggable="true"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
                   <div class="storyBox-name">{{ strlen($data['story']->name)>15?substr($data['story']->name, 0, 15):$data['story']->name }}</div>   
-                  <div class="portlet-owner">4d</div>     
-                  <div class="portlet-owner">2015-05-19</div>                    
-                  <div class="portlet-owner">~2015-05-19</div>
+                  <div class="portlet-owner">{{$data['story']->manDay}}d</div>     
+                  <div class="portlet-owner">{{$data['story']->startDate}}</div>                    
+                  <div class="portlet-owner">~{{$data['story']->doneDate}}</div>
                   <div class="storyBox-foot"><a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button"><span class="glyphicon glyphicon-plus-sign"></span></a></div>
                 </div>
               </div> 
