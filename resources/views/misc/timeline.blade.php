@@ -34,9 +34,10 @@
             data.addColumn('string', 'content');
 
             data.addRows([
-                [new Date(2010,07,23), , '<div>Conversation</div><img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2010,07,23,23,00,00), , '<div>Mail from boss</div><img src="img/mail-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2010,07,24,16,00,00), , 'Report'],
+                [new Date(2015,05,22), new Date(2015,05,26), '<div>Database Rework</div>'],
+                [new Date(2015,04,23), new Date(2015,04,28), '<div>Web Rework</div>'],
+                [new Date(2015,01,23), new Date(2015,02,05), '<div>APP Rework</div>'],
+                [new Date(2015,05,24), , '<div>Database Rework</div>'],
             ]);
 
             // specify options
