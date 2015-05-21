@@ -85,7 +85,7 @@
 	</div>
 	
 </nav>
-		<div class="col-md-2 column">
+		<div class="col-md-2 column ">
 			@yield('sidebar')			
 		</div>
 		<div class="col-md-10 column">

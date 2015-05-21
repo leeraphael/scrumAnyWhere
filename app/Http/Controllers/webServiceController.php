@@ -1,9 +1,20 @@
 <?php namespace App\Http\Controllers;
 use App\task;
+use App\comment;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Session;
+
 use Illuminate\Http\Request;
+
+function scrumAnyWhereLog($action)
+{
+	$logDesc = session('username')." ".$action;
+	$log = new comment(['username'=>session('username'),
+		             	 'desc'=>$logDesc]);
+	$log->save();
+}
 
 class webServiceController extends Controller {
 
@@ -27,6 +38,7 @@ class webServiceController extends Controller {
 		$task->owner = $input['owner'];
 		$task->save();
 
+		scrumAnyWhereLog("moved Task <span class=\"logTag\">#".$input['taskId']."</span> to <span>". $input['status'] . "</span> area");
 		return;
 	}
 
@@ -40,7 +52,22 @@ class webServiceController extends Controller {
 
 	public function updateLog(Request $request)
 	{		
-		return "Hello";
+		if (Session::has('lastLogId'))
+		{
+			
+			$input = $request->all();
+			$lastLogId = session('lastLogId');
+			$log = comment::where('id', '>', $lastLogId)->first();
+			session(['lastLogId'=> $log->id]);
+			return $log->created_at.": ".$log->desc;
+		}
+		else
+		{
+			$input = $request->all();
+			$log = comment::orderBy('created_at')->last();
+			session(['lastLogId'=> $log->id]);
+			return $log->created_at.": ".$log->desc;
+		}		
 	}
 
 }

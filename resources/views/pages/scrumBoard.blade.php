@@ -214,13 +214,14 @@ function explode(){
       }
     });    
   ;
-  setTimeout(explode, 10000);
+  setTimeout(explode, 6000);
 }
-setTimeout(explode, 1);
+setTimeout(explode, 3000);
 </script>
-<ul id="log1">
-  <li>
-    Raphael created the task
-  </li>
-</ul>
+<div>
+  <h4>Activity Board</h4>
+  <hr>
+  <ul id="log1">  
+  </ul>
+</div>
 @endsection

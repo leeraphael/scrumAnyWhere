@@ -16,6 +16,6 @@ class comment extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['type', 'typeId', 'desc'];
+	protected $fillable = ['username', 'desc'];
 
 }

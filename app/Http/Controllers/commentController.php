@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class homeController extends Controller {
+class commentController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,12 +14,7 @@ class homeController extends Controller {
 	 */
 	public function index()
 	{
-		//TODO set session here 
-		session(['username'=>'Raphael']);
-		//TODO get projectId from DB
-		session(['projectId'=>'1']);
-		
-		return view('pages/home');
+		//
 	}
 
 	/**
