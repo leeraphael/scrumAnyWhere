@@ -145,6 +145,9 @@
           <tr>
             <th class="active">
               Story
+              <a href="{{ action('storyController@create',  ["projectId" => session('projectId')]) }}" role="button">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+              </a>
             </th>
             <th class="active">
               Todo
@@ -169,7 +172,14 @@
                   <div class="portlet-owner">{{$data['story']->manDay}}d</div>     
                   <div class="portlet-owner">{{$data['story']->startDate}}</div>                    
                   <div class="portlet-owner">~{{$data['story']->doneDate}}</div>
-                  <div class="storyBox-foot"><a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button"><span class="glyphicon glyphicon-plus-sign"></span></a></div>
+                  <div class="storyBox-foot">
+                    <a href="{{ action('storyController@show',  ["storyId" => $data['story']->id]) }}" role="button">
+                      <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                    <a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button">
+                      <span class="glyphicon glyphicon-plus-sign"></span>
+                    </a>
+                  </div>
                 </div>
               </div> 
             </td>

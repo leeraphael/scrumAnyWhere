@@ -40,6 +40,9 @@
 				<li>
 					<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
 				</li>
+				<li>
+					<a href="{{ action('miscController@timeline')}}">Timeline</a>
+				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management<strong class="caret"></strong></a>
 					<ul class="dropdown-menu">
@@ -53,9 +56,7 @@
 							<a href="{{ action('taskController@index')}}">Task List</a>
 						</li>								
 						<li class="divider"></li>
-						<li>
-							<a href="{{ action('miscController@timeline')}}">Timeline</a>
-						</li>
+						
 					</ul>				
 				</li>
 
