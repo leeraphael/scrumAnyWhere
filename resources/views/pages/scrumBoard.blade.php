@@ -158,8 +158,10 @@
           </tr>
         </thead>
         <tbody>
+        <?php $counter = 0; ?>
         @foreach($dataSet as $data)
-          <tr>
+          <tr class="@@if($counter % 2 == 1) active @endif">
+          <?php $counter++; ?>
             <td>
               <div class="storyBoxContainer">                
                 <div class="storyBox" draggable="true"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>

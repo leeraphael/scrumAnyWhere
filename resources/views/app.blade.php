@@ -35,38 +35,40 @@
 	</div>
 	
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav">
-			<li>
-				<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management<strong class="caret"></strong></a>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="{{ action('projectController@index')}}">Project List</a>
-					</li>
-					<li>
-						<a href="{{ action('storyController@index')}}">Story List</a>
-					</li>
-					<li>
-						<a href="{{ action('taskController@index')}}">Task List</a>
-					</li>								
-					<li class="divider"></li>
-					<li>
-						<a href="{{ action('miscController@timeline')}}">Timeline</a>
-					</li>
-				</ul>				
-			</li>
+		@if (!Auth::guest())
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{{ action('projectController@index')}}">Project List</a>
+						</li>
+						<li>
+							<a href="{{ action('storyController@index')}}">Story List</a>
+						</li>
+						<li>
+							<a href="{{ action('taskController@index')}}">Task List</a>
+						</li>								
+						<li class="divider"></li>
+						<li>
+							<a href="{{ action('miscController@timeline')}}">Timeline</a>
+						</li>
+					</ul>				
+				</li>
 
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<strong class="caret"></strong></a>
-				<ul class="dropdown-menu">					
-					<li>
-						<a href="#">TelecomES</a>
-					</li>
-				</ul>				
-			</li>
-		</ul>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">					
+						<li>
+							<a href="#">TelecomES</a>
+						</li>
+					</ul>				
+				</li>
+			</ul>
+		@endif
 		<ul class="nav navbar-nav navbar-right">			
 			@if (Auth::guest())
 				<li><a href="{{ url('/auth/login') }}">Login</a></li>
