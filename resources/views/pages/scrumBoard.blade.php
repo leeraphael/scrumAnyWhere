@@ -8,11 +8,10 @@
   }
   .box {
     cursor: move;
-  }
-  .storyBoxContainer {
-    width: 90px;
-    float: left;    
-    padding-bottom: 100px;
+  } 
+  .taskArea{
+    background-color: #FCFCEE;
+    min-width: 130px;
   }
   .taskBox {
     width: 130px;
@@ -63,17 +62,20 @@
     height: 100px;
     width: 150px;
   }
-
-  .storyBox {
+  .storyArea{
+    background-color: #FFFFFF;
+    min-width: 150px;
+    text-align: center;
+  }
+.storyBox {
   height: 150px;
-  width: 150px;
+  min-width: 150px;
   float: left;
   margin-top: 5px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: inset 0 0 3px #000;
   text-align: center;
-  cursor: move;
 }
 .storyBox header {
   color: #fff;
@@ -165,12 +167,9 @@
           </tr>
         </thead>
         <tbody>
-        <?php $counter = 0; ?>
         @foreach($dataSet as $data)
-          <tr class="@@if($counter % 2 == 1) active @endif">
-          <?php $counter++; ?>
-            <td>
-              <div class="storyBoxContainer">                
+          <tr>
+            <td class="storyArea" width="170px">
                 <div class="storyBox" draggable="true"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
                   <div class="storyBox-name">{{ strlen($data['story']->name)>15?substr($data['story']->name, 0, 15):$data['story']->name }}</div>   
                   <div class="portlet-owner">{{$data['story']->manDay}}d</div>     
@@ -185,23 +184,22 @@
                     </a>
                   </div>
                 </div>
-              </div> 
             </td>
-            <td>
+            <td class="taskArea">
               <div class="taskBox" id="todo">
                 @foreach($data['tasksTodo'] as $task)
                   @include('pages.scrumBoardTable')
                 @endforeach   
               </div>
             </td>
-            <td>
+            <td class="taskArea">
               <div class="taskBox" id="go">
                 @foreach($data['tasksGo'] as $task)
                   @include('pages.scrumBoardTable')
                 @endforeach   
               </div>
             </td>
-            <td>
+            <td class="taskArea">
               <div class="taskBox" id="done">
                 @foreach($data['tasksDone'] as $task)
                   @include('pages.scrumBoardTable')
