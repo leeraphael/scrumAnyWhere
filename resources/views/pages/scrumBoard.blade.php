@@ -4,21 +4,19 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <style>
   body {
-    min-width: 520px;
   }
   .box {
     cursor: move;
   } 
   .taskArea{
     background-color: #FCFCEE;
-    min-width: 130px;
   }
   .taskBox {
-    width: 130px;
+    min-width:170px;
     float: left;    
     margin-top: 5px;
     margin-left: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
   .portlet {
     margin: 0 1em 1em 0;    
@@ -26,6 +24,7 @@
     width: 150px;
     padding: 5px 6px 0px 6px;  
     border-radius: 10px;
+    float: left;
   }
   .portlet-header {
     font-size:small;
