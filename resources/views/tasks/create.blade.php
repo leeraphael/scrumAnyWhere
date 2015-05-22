@@ -26,7 +26,7 @@
 	<div class="form-group">
 		 <label for="name" class="col-sm-2 control-label">Color</label>
 		<div class="col-sm-2">
-			{!!	Form::select('color', array('fdf28a' => 'Yellow', 'b6dcff' => 'Blue'), 'fdf28a', ['class' => 'form-control']) !!}
+			{!!	Form::select('color', array('FEFFAF' => 'Yellow', 'AFFEFF' => 'Blue', 'FFB0AF' => 'Red'), 'fdf28a', ['class' => 'form-control']) !!}
 		</div>
 	</div>	
 	<div class="form-group">

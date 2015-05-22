@@ -92,46 +92,6 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/pages/scrumBoard.blade.php",
-			"settings":
-			{
-				"buffer_size": 5865,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/Auth/AuthController.php",
-			"settings":
-			{
-				"buffer_size": 1103,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
-			"settings":
-			{
-				"buffer_size": 2771,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "vendor/phpunit/phpunit/tests/TextUI/report-useless-tests.phpt",
-			"settings":
-			{
-				"buffer_size": 546,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/webServiceController.php",
-			"settings":
-			{
-				"buffer_size": 893,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/Http/routes.php",
 			"settings":
 			{
@@ -140,66 +100,34 @@
 			}
 		},
 		{
-			"file": "resources/views/auth/login.blade.php",
+			"file": "resources/views/pages/scrumBoard.blade.php",
 			"settings":
 			{
-				"buffer_size": 1749,
-				"line_ending": "Unix"
+				"buffer_size": 6639,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/commentController.php",
+			"file": "app/Http/Controllers/webServiceController.php",
 			"settings":
 			{
-				"buffer_size": 1097,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "database/migrations/2015_05_12_043355_create_comments_table.php",
-			"settings":
-			{
-				"buffer_size": 551,
-				"line_ending": "Unix"
+				"buffer_size": 1708,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "resources/views/pages/scrumBoardTable.blade.php",
 			"settings":
 			{
-				"buffer_size": 439,
+				"buffer_size": 473,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "resources/views/auth/password.blade.php",
+			"file": "app/Http/Controllers/scrumBoardController.php",
 			"settings":
 			{
-				"buffer_size": 1363,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/auth/register.blade.php",
-			"settings":
-			{
-				"buffer_size": 1909,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/auth/reset.blade.php",
-			"settings":
-			{
-				"buffer_size": 1750,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/app.blade.php",
-			"settings":
-			{
-				"buffer_size": 3321,
+				"buffer_size": 1182,
 				"line_ending": "Windows"
 			}
 		}
@@ -259,9 +187,6 @@
 	[
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Auth",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Requests",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Services",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations",
@@ -270,8 +195,10 @@
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/auth",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/misc",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/vendor",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/storage",
@@ -279,61 +206,75 @@
 	],
 	"file_history":
 	[
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/create.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/task.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/app.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/homeController.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/index.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/show.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/scrumBoardController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/show.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/scrumBoard.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/miscController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/misc/timeline.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/app.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/projectController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/create.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/story.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/storyController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/create.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/edit.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/create.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/edit.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/webServiceController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Support/Facades/Session.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Session/Session.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/scrumBoardTable.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_07_045400_create_tasks_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/comment.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/taskController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/task.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/homeController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/home.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/routes.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Auth/AuthController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/phpunit/phpunit/tests/TextUI/report-useless-tests.phpt",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/config/session.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/scrumBoardController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/auth/login.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/commentController.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_12_043355_create_comments_table.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/auth/password.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/auth/register.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/auth/reset.blade.php",
+		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/index.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/css/RL.css",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/edit.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/show.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/taskController.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/scrumBoard.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_12_042351_create_stories_table.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/storyController.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_07_045400_create_tasks_table.php",
 		"/D/0001 Tools/Sublime Text Build 3083 x64/Data/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/D/0001 Tools/Sublime Text Build 3083 x64/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/scrumBoard2.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/show.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/scrumBoard.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/pages/home.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/css/bootstrap-theme.css",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/showMapMode.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/projectController.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/js/timeline.js",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/create.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/edit.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/user/register.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/project.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/projects/index.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_12_043355_create_comments_table.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/database/migrations/2015_05_05_152700_create_projects_table.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/story.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/phpunit/phpunit/src/Framework/Constraint/ArrayHasKey.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Config/Repository.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/nesbot/carbon/tests/StartEndOfTest.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Controller.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/symfony/console/Symfony/Component/Console/Output/StreamOutput.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/stories/create.blade.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/comment.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/tasks/index.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Http/Request.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/config/app.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Support/Facades/Redis.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/HttpCache/HttpCacheTestCase.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Requests/createProjectRequest.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Requests/Request.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/laravel/framework/src/Illuminate/Console/Command.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/index.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/miscController.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/misc/timeline.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/phpspec/prophecy/composer.json",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/vendor/compiled.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/doc/Model_sqlTableList.xlsx",
@@ -350,7 +291,6 @@
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/public/css/app.css",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/resources/views/welcome.blade.php",
 		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/bootstrap/app.php",
-		"/C/DevTools/xmapp/htdocs/scrumAnyWhere/app/Http/Controllers/Auth/AuthController.php",
 		"/C/DevTools/xmapp/htdocs/twbs/index.php"
 	],
 	"find":
@@ -359,9 +299,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 96.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -369,6 +310,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"move",
+			"storyBoxContainer",
+			"last",
+			"delete_",
+			"session",
 			"task->id",
 			"raphael",
 			"flo",
@@ -490,161 +436,11 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/pages/scrumBoard.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5865,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5776,
-								5776
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3857.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Http/Controllers/Auth/AuthController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1103,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								712,
-								712
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2355,
-								2355
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 2040.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "vendor/phpunit/phpunit/tests/TextUI/report-useless-tests.phpt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 546,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/Http/Controllers/webServiceController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								884,
-								884
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
@@ -656,219 +452,8 @@
 						"selection":
 						[
 							[
-								960,
-								960
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "resources/views/auth/login.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1749,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								31
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/Http/Controllers/commentController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1097,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								285,
-								285
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "database/migrations/2015_05_12_043355_create_comments_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 551,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								354,
-								354
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "resources/views/pages/scrumBoardTable.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 439,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								439,
-								439
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "resources/views/auth/password.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								31,
-								31
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "resources/views/auth/register.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								31,
-								31
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "resources/views/auth/reset.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								31,
-								31
+								1144,
+								1144
 							]
 						],
 						"settings":
@@ -878,27 +463,58 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": -0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "resources/views/app.blade.php",
+					"buffer": 1,
+					"file": "resources/views/pages/scrumBoard.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3321,
+						"buffer_size": 6639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2617,
-								2617
+								4190,
+								4190
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3060.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/webServiceController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1387,
+								1387
 							]
 						],
 						"settings":
@@ -908,10 +524,69 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1140.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/pages/scrumBoardTable.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/Http/Controllers/scrumBoardController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								277,
+								277
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -966,20 +641,124 @@
 		"selected_items":
 		[
 			[
+				"scrum",
+				"resources\\views\\pages\\scrumBoard.blade.php"
+			],
+			[
+				"web",
+				"app\\Http\\Controllers\\webServiceController.php"
+			],
+			[
 				"route",
 				"app\\Http\\routes.php"
+			],
+			[
+				"misccont",
+				"app\\Http\\Controllers\\miscController.php"
+			],
+			[
+				"app",
+				"resources\\views\\app.blade.php"
+			],
+			[
+				"project",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"projec",
+				"app\\Http\\Controllers\\projectController.php"
+			],
+			[
+				"storycon",
+				"app\\Http\\Controllers\\storyController.php"
+			],
+			[
+				"story",
+				"app\\story.php"
+			],
+			[
+				"create",
+				"resources\\views\\tasks\\create.blade.php"
+			],
+			[
+				"task",
+				"app\\Http\\Controllers\\taskController.php"
+			],
+			[
+				"scrumb",
+				"resources\\views\\pages\\scrumBoard.blade.php"
+			],
+			[
+				"scrumbla",
+				"resources\\views\\pages\\scrumBoard.blade.php"
+			],
+			[
+				"home.bl",
+				"resources\\views\\pages\\home.blade.php"
+			],
+			[
+				"home",
+				"app\\Http\\Controllers\\homeController.php"
+			],
+			[
+				"app.",
+				"resources\\views\\app.blade.php"
+			],
+			[
+				"scr",
+				"resources\\views\\pages\\scrumBoard.blade.php"
+			],
+			[
+				"we",
+				"app\\Http\\Controllers\\webServiceController.php"
+			],
+			[
+				"tasks",
+				"database\\migrations\\2015_05_07_045400_create_tasks_table.php"
+			],
+			[
+				"homeconte",
+				"app\\Http\\Controllers\\homeController.php"
 			],
 			[
 				"app.bl",
 				"resources\\views\\app.blade.php"
 			],
 			[
-				"reoute",
-				"vendor\\phpunit\\phpunit\\tests\\TextUI\\report-useless-tests.phpt"
+				"scrumcon",
+				"app\\Http\\Controllers\\scrumBoardController.php"
+			],
+			[
+				"sess",
+				"config\\session.php"
+			],
+			[
+				"",
+				"app\\Http\\Controllers\\scrumBoardController.php"
 			],
 			[
 				"authcon",
 				"app\\Http\\Controllers\\Auth\\AuthController.php"
+			],
+			[
+				"hom",
+				"app\\Http\\Controllers\\homeController.php"
+			],
+			[
+				"au",
+				"app\\Http\\Controllers\\Auth\\AuthController.php"
+			],
+			[
+				"scrumbo",
+				"app\\Http\\Controllers\\scrumBoardController.php"
+			],
+			[
+				"scrumbocon",
+				"app\\Http\\Controllers\\scrumBoardController.php"
+			],
+			[
+				"reoute",
+				"vendor\\phpunit\\phpunit\\tests\\TextUI\\report-useless-tests.phpt"
 			],
 			[
 				"rotue",
@@ -990,27 +769,11 @@
 				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\AuthenticatesAndRegistersUsers.php"
 			],
 			[
-				"scrum",
-				"resources\\views\\pages\\scrumBoard.blade.php"
-			],
-			[
-				"web",
-				"app\\Http\\Controllers\\webServiceController.php"
-			],
-			[
 				"comment",
 				"app\\Http\\Controllers\\commentController.php"
 			],
 			[
 				"scru",
-				"resources\\views\\pages\\scrumBoard.blade.php"
-			],
-			[
-				"task",
-				"app\\Http\\Controllers\\taskController.php"
-			],
-			[
-				"scr",
 				"resources\\views\\pages\\scrumBoard.blade.php"
 			],
 			[
@@ -1024,14 +787,6 @@
 			[
 				"index",
 				"resources\\views\\stories\\index.blade.php"
-			],
-			[
-				"scrumcon",
-				"app\\Http\\Controllers\\scrumBoardController.php"
-			],
-			[
-				"create",
-				"resources\\views\\tasks\\create.blade.php"
 			],
 			[
 				"taskcon",
@@ -1062,10 +817,6 @@
 				"resources\\views\\app.blade.php"
 			],
 			[
-				"project",
-				"app\\Http\\Controllers\\projectController.php"
-			],
-			[
 				"rou",
 				"app\\Http\\routes.php"
 			],
@@ -1088,10 +839,6 @@
 			[
 				"strocon",
 				"app\\Http\\Controllers\\storyController.php"
-			],
-			[
-				"story",
-				"app\\story.php"
 			],
 			[
 				"taask",
@@ -1130,16 +877,8 @@
 				"resources\\views\\stories\\show.blade.php"
 			],
 			[
-				"app.",
-				"resources\\views\\app.blade.php"
-			],
-			[
 				"crea",
 				"resources\\views\\stories\\create.blade.php"
-			],
-			[
-				"storycon",
-				"app\\Http\\Controllers\\storyController.php"
 			],
 			[
 				"sory",
@@ -1159,10 +898,6 @@
 			],
 			[
 				"projeccon",
-				"app\\Http\\Controllers\\projectController.php"
-			],
-			[
-				"",
 				"app\\Http\\Controllers\\projectController.php"
 			],
 			[
@@ -1198,10 +933,6 @@
 				"resources\\views\\app.blade.php"
 			],
 			[
-				"tasks",
-				"app\\tasks.php"
-			],
-			[
 				"index.b",
 				"resources\\views\\projects\\index.blade.php"
 			],
@@ -1220,10 +951,6 @@
 			[
 				"create.",
 				"resources\\views\\projects\\create.blade.php"
-			],
-			[
-				"projec",
-				"app\\Http\\Controllers\\projectController.php"
 			],
 			[
 				"model",
@@ -1260,10 +987,6 @@
 			[
 				".env",
 				"vendor\\vlucas\\phpdotenv\\tests\\fixtures\\.env"
-			],
-			[
-				"home",
-				"app\\Http\\Controllers\\homeController.php"
 			],
 			[
 				"hoemcon",
