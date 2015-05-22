@@ -22,19 +22,27 @@
     margin: 0 1em 1em 0;    
     height: 100px;
     width: 150px;
-    padding: 5px 6px 0px 6px;  
     border-radius: 10px;
     float: left;
     border: 0px;
   }
   .portlet-header {
     font-size:small;
-    text-align: right;
-    width: 136px;
+    text-align: left;
+    width: 150px;
     height: 20px;
     padding: 0.0px 4.1px;
     margin-bottom: 0.5em;
+    border-radius: 10px 10px 0px 0px;
     border: 0px;
+    background-color: #0300DC;
+
+    /* for transparency*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+    filter: alpha(opacity=50);  /* IE 5-7 */
+    -moz-opacity: 0.5;          /* Netscape */
+    -khtml-opacity: 0.5;        /* Safari 1.x */
+    opacity: 0.5;               /* Good browsers */
   }
   .portlet-owner {
     font-size:small;
@@ -43,8 +51,8 @@
   .portlet-foot {
     font-size:small;
     text-align: right;
-    margin-right: 0px;
-    margin-top: 9px;
+    margin-right: 5px;
+    margin-top: 14px;
     float: right;  
   }
   .portlet-toggle {
@@ -171,7 +179,7 @@
         @foreach($dataSet as $data)
           <tr>
             <td class="storyArea" width="170px">
-                <div class="storyBox" draggable="true"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
+                <div class="storyBox"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
                   <div class="storyBox-name">{{ strlen($data['story']->name)>15?substr($data['story']->name, 0, 15):$data['story']->name }}</div>   
                   <div class="portlet-owner">{{$data['story']->manDay}}d</div>     
                   <div class="portlet-owner">{{$data['story']->startDate}}</div>                    
