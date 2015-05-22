@@ -3,8 +3,11 @@
 @section('head')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <style>
-  body {
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
   }
+}
   .box {
     cursor: move;
   } 
@@ -47,6 +50,7 @@
   .portlet-owner {
     font-size:small;
     text-align: center;
+    padding-left:35px;
   }    
   .portlet-foot {
     font-size:small;
@@ -100,6 +104,10 @@
     font-size: large;
     text-align: center;
     margin-bottom: 1px;
+  }
+.storyBox-duration {
+    font-size:small;
+    text-align: center;
   }
 .storyBox-foot {
   font-size:small;
@@ -181,15 +189,15 @@
             <td class="storyArea" width="170px">
                 <div class="storyBox"><header><a href="{{ url('/story', $data['story']->id) }}">{{ $data['story']->id }}</a></header>
                   <div class="storyBox-name">{{ strlen($data['story']->name)>15?substr($data['story']->name, 0, 15):$data['story']->name }}</div>   
-                  <div class="portlet-owner">{{$data['story']->manDay}}d</div>     
-                  <div class="portlet-owner">{{$data['story']->startDate}}</div>                    
-                  <div class="portlet-owner">~{{$data['story']->doneDate}}</div>
+                  <div class="storyBox-duration">{{$data['story']->manDay}}d</div>     
+                  <div class="storyBox-duration">{{$data['story']->startDate}}</div>                    
+                  <div class="storyBox-duration">~{{$data['story']->doneDate}}</div>
                   <div class="storyBox-foot">
                     <a href="{{ action('storyController@show',  ["storyId" => $data['story']->id]) }}" role="button">
-                      <span class="glyphicon glyphicon-cog"></span>
+                      <span class="configIconColor glyphicon glyphicon-cog"></span>
                     </a>
                     <a href="{{ action('taskController@create',  ["storyId" => $data['story']->id]) }}" role="button">
-                      <span class="glyphicon glyphicon-plus-sign"></span>
+                      <span class="configIconColor glyphicon glyphicon-plus-sign"></span>
                     </a>
                   </div>
                 </div>

@@ -4,9 +4,9 @@
     <div class="portlet-owner"><span id="owner_{{$task->id}}" >{{ $task->owner }}</span>
     <div class="portlet-foot">
 	    <a href="{{ action('taskController@show',  ["taskId" => $task->id]) }}" role="button">
-	      <span class="glyphicon glyphicon-cog"></span>
+	      <span class="configIconColor glyphicon glyphicon-cog"></span>
 	    </a>
-	    <span id="delete_{{$task->id}}" class="glyphicon glyphicon-minus-sign"></span>
+	    <span id="delete_{{$task->id}}" class="configIconColor glyphicon glyphicon-minus-sign"></span>
     </div>
     </div>                  
   </div>
