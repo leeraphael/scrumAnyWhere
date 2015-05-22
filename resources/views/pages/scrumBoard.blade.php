@@ -3,11 +3,11 @@
 @section('head')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <style>
-@media (min-width: 979px) {
+/*@media (min-width: 979px) {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
-}
+}*/
   .box {
     cursor: move;
   } 
