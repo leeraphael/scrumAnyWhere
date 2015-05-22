@@ -57,14 +57,18 @@ class webServiceController extends Controller {
 			
 			$input = $request->all();
 			$lastLogId = session('lastLogId');
-			$log = comment::where('id', '>', $lastLogId)->first();
+			$log = comment::where('id', '>', $lastLogId)->first();			
+			if(is_null($log))
+			{
+				return "";
+			}
 			session(['lastLogId'=> $log->id]);
 			return $log->created_at.": ".$log->desc;
 		}
 		else
 		{
 			$input = $request->all();
-			$log = comment::orderBy('created_at')->last();
+			$log = comment::orderBy('created_at')->first();
 			session(['lastLogId'=> $log->id]);
 			return $log->created_at.": ".$log->desc;
 		}		

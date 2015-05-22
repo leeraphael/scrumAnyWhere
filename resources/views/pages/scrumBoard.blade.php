@@ -6,6 +6,9 @@
   body {
     min-width: 520px;
   }
+  .box {
+    cursor: move;
+  }
   .storyBoxContainer {
     width: 90px;
     float: left;    
@@ -105,6 +108,7 @@
         { 
           // update task owner
           $('#owner_'+ui.item.context.id).text("{{ session('username')}}");
+          console.log($('#owner_'+ui.item.context.id).text());
           //post to server to update DB
           $.post( 'updateTask', { taskId: ui.item.context.id.split("_")[1],
                                   status: ui.item.parent()[0].id,
@@ -217,11 +221,14 @@
 function explode(){
   $.post( 'updateLog', { _token: "{{ csrf_token() }}" })
     .done(function(data){ 
-      $('#log1').prepend('<li>'+data+'</li>');
-      if($( "#log1 li" ).size()>10)
+      if(data!="")
       {
-        $("#log1 li:last").remove();
-      }
+        $('#log1').prepend('<li>'+data+'</li>');
+        if($( "#log1 li" ).size()>10)
+        {
+          $("#log1 li:last").remove();
+        }
+      }      
     });    
   ;
   setTimeout(explode, 6000);
@@ -231,7 +238,7 @@ setTimeout(explode, 3000);
 <div>
   <h4>Activity Board</h4>
   <hr>
-  <ul id="log1">  
+  <ul id="log1"> 
   </ul>
 </div>
 @endsection
