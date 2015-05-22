@@ -25,6 +25,7 @@
     padding: 5px 6px 0px 6px;  
     border-radius: 10px;
     float: left;
+    border: 0px;
   }
   .portlet-header {
     font-size:small;
@@ -33,6 +34,7 @@
     height: 20px;
     padding: 0.0px 4.1px;
     margin-bottom: 0.5em;
+    border: 0px;
   }
   .portlet-owner {
     font-size:small;
