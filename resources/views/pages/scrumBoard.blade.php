@@ -118,8 +118,8 @@
         if(this === ui.item.parent()[0])
         { 
           // update task owner
-          $('#owner_'+ui.item.context.id).text("{{ session('username')}}");
-          console.log($('#owner_'+ui.item.context.id).text());
+          $('#owner_'+ui.item.context.id.split("_")[1]).text("{{ session('username')}}");
+          console.log($('#owner_'+ui.item.context.id.split("_")[1]));
           //post to server to update DB
           $.post( 'updateTask', { taskId: ui.item.context.id.split("_")[1],
                                   status: ui.item.parent()[0].id,
