@@ -30,7 +30,7 @@ class CreateTasksTable extends Migration {
 			// 			1. yellow: #fdf28a
 			// 			2. blue: b6dcff
 			$table->datetime('startDate')->nullable();
-			$table->datetime('doneDate')->nullable();
+			$table->datetime('endDate')->nullable();
 			$table->timestamps();
 		});
 	}

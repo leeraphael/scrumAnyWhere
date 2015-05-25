@@ -33,7 +33,7 @@ class webServiceController extends Controller {
 			$task->startDate = date('Y-m-d H:i:s');
 		}
 		elseif ($input['status'] == "done") {
-			$task->doneDate = date('Y-m-d H:i:s');
+			$task->endDate = date('Y-m-d H:i:s');
 		}
 		$task->owner = $input['owner'];
 		$task->save();

@@ -19,13 +19,19 @@ class CreateStoriesTable extends Migration {
 			$table->string('name');
 			$table->longText('desc')->nullable();
 			$table->string('manDay')->nullable();
-			$table->string('status')->nullable();
+			$table->string('location');
+			// Location:
+			// 			1. Backlog
+			// 			2. SandBox
+			// 			3. IceBox
+			// 			#4~#10 is dummy
+			$table->string('status');
 			// Status:
 			// 			1. todo
 			// 			2. go
 			// 			3. done
 			$table->datetime('startDate')->nullable();
-			$table->datetime('doneDate')->nullable();
+			$table->datetime('endDate')->nullable();
 			$table->timestamps();
 		});
 	}

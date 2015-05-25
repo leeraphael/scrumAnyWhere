@@ -21,5 +21,5 @@ class story extends Model {
 	                       'name',
 	                       'manDay',
 	                       'startDate',
-	                       'doneDate'];
+	                       'endDate'];
 }

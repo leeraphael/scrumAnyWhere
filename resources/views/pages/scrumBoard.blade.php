@@ -191,7 +191,7 @@
                   <div class="storyBox-name">{{ strlen($data['story']->name)>15?substr($data['story']->name, 0, 15):$data['story']->name }}</div>   
                   <div class="storyBox-duration">{{$data['story']->manDay}}d</div>     
                   <div class="storyBox-duration">{{$data['story']->startDate}}</div>                    
-                  <div class="storyBox-duration">~{{$data['story']->doneDate}}</div>
+                  <div class="storyBox-duration">~{{$data['story']->endDate}}</div>
                   <div class="storyBox-foot">
                     <a href="{{ action('storyController@show',  ["storyId" => $data['story']->id]) }}" role="button">
                       <span class="configIconColor glyphicon glyphicon-cog"></span>
