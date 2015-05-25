@@ -1,0 +1,1 @@
+INSERT INTO users VALUES(1,'admin','admin@admin.com','$2y$10$WKZIF9DxqxysBHcMqOKUM.lwUYVQ6Lg2GU8cMYzao2sP8flSn35mS',NULL,'2015-05-25 10:36:46','2015-05-25 10:36:46');
