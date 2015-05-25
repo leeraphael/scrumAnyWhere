@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<title>ScrumAnyWhere</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
@@ -41,22 +42,27 @@
 					<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
 				</li>
 				<li>
+					<a href="{{ action('miscController@backlog')}}">Story Backlog</a>
+				</li>
+				<li>
 					<a href="{{ action('miscController@timeline')}}">Timeline</a>
 				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Management<strong class="caret"></strong></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting<strong class="caret"></strong></a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="{{ action('projectController@index')}}">Project List</a>
+							<a href="{{ action('releasePlanController@index')}}">Release Plans</a>
 						</li>
-						<li>
-							<a href="{{ action('storyController@index')}}">Story List</a>
-						</li>
-						<li>
-							<a href="{{ action('taskController@index')}}">Task List</a>
-						</li>								
 						<li class="divider"></li>
-						
+						<li>
+							<a href="{{ action('projectController@index')}}">Projects</a>
+						</li>
+						<li>
+							<a href="{{ action('storyController@index')}}">Stories</a>
+						</li>
+						<li>
+							<a href="{{ action('taskController@index')}}">Tasks</a>
+						</li>
 					</ul>				
 				</li>
 

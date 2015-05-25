@@ -2,14 +2,13 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class story extends Model {
-
+class releasePlan extends Model {
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'stories';
+	protected $table = 'releasePlans';
 
 
 	/**
@@ -20,8 +19,6 @@ class story extends Model {
 	protected $fillable = ['projectId', 
 	                       'name',
 	                       'manDay',
-	                       'location',
-	                       'status',
 	                       'startDate',
 	                       'endDate'];
 }

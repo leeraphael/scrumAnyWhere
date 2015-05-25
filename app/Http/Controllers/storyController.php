@@ -50,6 +50,7 @@ class storyController extends Controller {
 		$story = new story(['projectId'=>$input['projectId'],
 			                'name'=>$input['name'], 
 			                'manDay'=>$input['manDay'], 
+			                'location'=>'1', 
 			                'startDate'=>$input['startDate'], 
 			                'desc'=>$input['desc'], 
 			                'status'=>'todo']);

@@ -16,9 +16,12 @@ Route::group(array('before' => 'auth'), function()
 	Route::resource('task', 'taskController');
 	Route::resource('story', 'storyController');
 	Route::resource('comment', 'commentController');
+	Route::resource('releasePlan', 'releasePlanController');
+	Route::resource('sprintPlan', 'sprintPlanController');
 
 	// Specific route
 	Route::get('timeline', 'miscController@timeline');
+	Route::get('backlog', 'miscController@backlog');
 	Route::get('scrumBoard', 'scrumBoardController@index');
 	Route::post('updateTask', 'webServiceController@updateTask');
 	Route::post('deleteTask', 'webServiceController@deleteTask');
