@@ -39,3 +39,48 @@
         </tbody>
       </table>
 @endsection
+
+@section('sidebar')
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="active">
+        ICE Box
+      </th>
+  </thead>
+  <tbody>        
+    <tr>
+      <td class="storyArea" width="170px" height="187px">
+      <div class="iceBox"></div>
+      </td>        
+  </tbody>
+</table>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="active">
+        Sand Box
+      </th>
+  </thead>
+  <tbody>        
+    <tr>
+      <td class="storyArea" width="170px" height="187px">
+      <div class="iceBox"></div>
+      </td>        
+  </tbody>
+</table>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="active">
+        Trash
+      </th>
+  </thead>
+  <tbody>        
+    <tr>
+      <td class="storyArea" width="170px" height="187px">
+      <div class="iceBox"></div>
+      </td>        
+  </tbody>
+</table>
+@endsection
