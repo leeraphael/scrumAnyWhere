@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Input;
 use Illuminate\Http\Request;
 
 class sprintPlanController extends Controller {
@@ -14,7 +14,7 @@ class sprintPlanController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		
 	}
 
 	/**
@@ -24,7 +24,9 @@ class sprintPlanController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		session(['releasePlanId' => Input::get('releasePlanId')]);
+	
+		view('sprintPlans.create');
 	}
 
 	/**

@@ -25,6 +25,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('scrumBoard', 'scrumBoardController@index');
 	Route::post('updateTask', 'webServiceController@updateTask');
 	Route::post('deleteTask', 'webServiceController@deleteTask');
+	Route::post('updateReleasePlanList', 'webServiceController@updateReleasePlanList');	
 	Route::post('updateLog', 'webServiceController@updateLog');    
 });
 

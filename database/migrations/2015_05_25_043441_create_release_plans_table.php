@@ -12,7 +12,7 @@ class CreateReleasePlansTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('release_plans', function(Blueprint $table)
+		Schema::create('releasePlans', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name');

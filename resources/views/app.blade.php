@@ -38,14 +38,19 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		@if (!Auth::guest())
 			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">					
+						<li>
+							<a href="#">TelecomES</a>
+						</li>
+					</ul>				
+				</li>
 				<li>
 					<a href="{{ action('scrumBoardController@index')}}">Scrum Board</a>
 				</li>
 				<li>
 					<a href="{{ action('miscController@backlog')}}">Story Backlog</a>
-				</li>
-				<li>
-					<a href="{{ action('miscController@timeline')}}">Timeline</a>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting<strong class="caret"></strong></a>
@@ -63,14 +68,9 @@
 						<li>
 							<a href="{{ action('taskController@index')}}">Tasks</a>
 						</li>
-					</ul>				
-				</li>
-
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">					
+						<li class="divider"></li>
 						<li>
-							<a href="#">TelecomES</a>
+							<a href="{{ action('miscController@timeline')}}">Timeline</a>
 						</li>
 					</ul>				
 				</li>

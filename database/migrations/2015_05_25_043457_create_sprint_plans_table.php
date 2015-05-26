@@ -12,12 +12,14 @@ class CreateSprintPlansTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('sprint_plans', function(Blueprint $table)
+		Schema::create('sprintPlans', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name');			
 			$table->datetime('startDate')->nullable();
-			$table->datetime('endDate')->nullable();
+			$table->datetime('endDate')->nullable();			
+			$table->datetime('expectedManDay')->nullable();
+			$table->datetime('actualManDay')->nullable();
 			$table->string('releasePlanId');
 			$table->timestamps();
 		});

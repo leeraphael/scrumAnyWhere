@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\releasePlan;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,9 @@ class releasePlanController extends Controller {
 	 */
 	public function index()
 	{
-		return "Hello";
+		$projectId = session('projectId');
+		$releasePlans = releasePlan::where('projectId', '=', $projectId)->get();
+		return view("releasePlans.index", compact('releasePlans'));
 	}
 
 	/**
@@ -24,7 +27,7 @@ class releasePlanController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view("releasePlans.create");
 	}
 
 	/**
@@ -32,9 +35,16 @@ class releasePlanController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
-		//
+	public function store(Request $request)
+	{	
+		$input = $request->all();
+		$releasePlan = new releasePlan(['projectId'=>session('projectId'),
+						                'name'=>$input['name'], 
+						                'startDate'=>$input['startDate'], 
+						                'endDate'=>$input['endDate']]);
+		$releasePlan->save();
+
+		return  redirect('releasePlan');	
 	}
 
 	/**

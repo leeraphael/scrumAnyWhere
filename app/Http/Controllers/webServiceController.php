@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\task;
+use App\sprintPlan;
 use App\comment;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -72,6 +73,18 @@ class webServiceController extends Controller {
 			session(['lastLogId'=> $log->id]);
 			return $log->created_at.": ".$log->desc;
 		}		
+	}
+
+	public function updateReleasePlanList(Request $request)
+	{		
+		$input = $request->all();
+		$log = sprintPlan::where('releasePlanId', '=', $input['releasePlanId'])->get();					
+
+		//======== Save Session ============
+		session(['releasePlanId'=>$input['releasePlanId']]);
+		//==================================
+		
+		return $log;
 	}
 
 }
